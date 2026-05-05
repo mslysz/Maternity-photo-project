@@ -1,0 +1,16 @@
+@use 'variables' as *;
+
+body {
+  background: $color-light;
+  font-family: $font-main;
+}
+//burger menu icon
+.material-symbols-outlined {
+  font-size: $fs-lg;
+  color: #111;
+  line-height: 1;
+}
+
+img {
+  max-width: 100%;
+}
