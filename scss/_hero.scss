@@ -1,1 +1,39 @@
 @use 'variables' as *;
+
+.hero {
+  height: 100dvh;
+  position: relative;
+
+  &__images {
+    height: 100%;
+  }
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.282);
+  }
+  &__title,
+  &__text {
+    font-family: $font-heading;
+    color: $color-light;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: $fs-md;
+  }
+}
