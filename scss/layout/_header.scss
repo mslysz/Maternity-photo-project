@@ -1,0 +1,27 @@
+@use '../base/variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 10px;
+  &__logo {
+    height: 20px;
+    width: auto;
+  }
+  &__burger {
+    cursor: pointer;
+    z-index: 11;
+    opacity: 1;
+
+    &--hide {
+      visibility: hidden;
+    }
+  }
+}

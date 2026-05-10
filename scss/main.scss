@@ -1,6 +1,10 @@
-@use 'reset' as *;
-@use 'variables' as *;
-@use 'globals' as *;
+@use 'base/reset';
+@use 'base/variables';
+@use 'base/globals';
 
-@use 'layout' as *;
-@use 'hero' as *;
+@use 'layout/container';
+@use 'layout/header';
+@use 'layout/nav';
+
+@use 'sections/hero';
+@use 'sections/about';

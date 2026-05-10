@@ -22,6 +22,12 @@ img {
   height: auto;
 }
 
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -172,5 +178,55 @@ img {
   margin-bottom: 10px;
 }
 .hero__text {
+  font-size: 1.25rem;
+}
+
+.about {
+  padding-block: 2rem;
+}
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding-block: 2rem;
+}
+.about__title {
+  color: #1a1a1a;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.about__text {
+  color: #777;
+  font-family: "Spectral, serif";
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.about__text--italic {
+  font-style: italic;
+}
+.about__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.875rem;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.about__link:visited {
+  color: inherit;
+}
+.about__link-icon {
   font-size: 1.25rem;
 }/*# sourceMappingURL=main.css.map */
