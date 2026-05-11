@@ -1,26 +1,48 @@
 @use '../base/variables' as *;
 
 .about {
-  padding-block: $space-5;
+  padding-block: $space-6;
+  &__image {
+    opacity: 0;
+    transform: translateY(200px);
+    transition:
+      opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+      transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  &__image--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
   &__content {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-block: $space-5;
+    padding-block: $space-6;
+
+    opacity: 0;
+    transform: translateY(70px);
+    transition:
+      opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+      transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    &--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__title {
     color: $color-dark;
     font-family: $font-heading;
     font-size: $fs-lg;
-    margin-bottom: $space-4;
+    margin-bottom: $space-6;
   }
   &__text {
     color: $color-muted;
     font-family: $font-text;
     font-size: $fs-sm;
-    margin-bottom: $space-3;
+    margin-bottom: $space-4;
     line-height: 1.6;
+
     &--italic {
       font-style: italic;
     }
