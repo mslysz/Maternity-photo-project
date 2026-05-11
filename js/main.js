@@ -1,13 +1,15 @@
-const burger = document.querySelector('.header__burger');
-const closeBurger = document.querySelector('.nav__close-burger');
-const nav = document.querySelector('.nav');
+//Selects the first element that matches the given CSS selector.
+const el = (selector) => document.querySelector(selector);
+///////
+const burger = el('.header__burger');
+const closeBurger = el('.nav__close-burger');
+const nav = el('.nav');
+const aboutImage = el('.about_image');
 
-burger.addEventListener('click', () => {
+const toggleMenu = () => {
   nav.classList.toggle('nav--open');
   burger.classList.toggle('header__burger--hide');
-});
+};
 
-closeBurger.addEventListener('click', () => {
-  nav.classList.toggle('nav--open');
-  burger.classList.toggle('header__burger--hide');
-});
+burger.addEventListener('click', toggleMenu);
+closeBurger.addEventListener('click', toggleMenu);
