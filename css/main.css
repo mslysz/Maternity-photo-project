@@ -8,6 +8,7 @@
 body {
   background: #f9f7f4;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .material-symbols-outlined {
@@ -178,7 +179,7 @@ img {
   margin-bottom: 10px;
 }
 .hero__text {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .about {
@@ -255,4 +256,108 @@ img {
 }
 .about__link-icon {
   font-size: 1.25rem;
+}
+
+.parallax {
+  background-image: url("../../images/olivia-anne-snyder-SMALL.jpg");
+  min-height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.maternity {
+  padding-block: 3rem;
+}
+.maternity__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.maternity__subtitle {
+  font-size: 0.75rem;
+  color: #777;
+  letter-spacing: 1px;
+  font-family: "Spectral, serif";
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+.maternity__title {
+  font-size: 2.2rem;
+  color: #777;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 1rem;
+}
+.maternity__description {
+  font-family: "Spectral, serif";
+  font-size: 0.875rem;
+  color: #4d4d4d;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.maternity__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+.maternity__card-content {
+  padding-block: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom: 1px solid #1a1a1a;
+}
+.maternity__card-text {
+  margin-bottom: 2rem;
+  font-family: "Spectral, serif";
+  font-size: 0.875rem;
+  color: #4d4d4d;
+  line-height: 1.6;
+  text-align: center;
+}
+.maternity__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.875rem;
+  color: inherit;
+  letter-spacing: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 0.5rem;
+  font-family: "Spectral, serif";
+  color: #1a1a1a;
+}
+.maternity__link:visited {
+  color: inherit;
+}
+.maternity__link-icon {
+  font-size: 1rem;
 }/*# sourceMappingURL=main.css.map */

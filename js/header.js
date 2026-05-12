@@ -21,5 +21,3 @@ export default function initHeader() {
     }
   });
 }
-
-console.log('heeader js dziala');

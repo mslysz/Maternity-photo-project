@@ -18,12 +18,10 @@ export default function initAbout() {
       aboutImage.classList.remove('about__image--visible');
     }
     //Text trigger
-    if (imageTop < vh * 0.66) {
+    if (imageTop < vh * 0.1) {
       aboutText.classList.add('about__content--visible');
     } else {
       aboutText.classList.remove('about__content--visible');
     }
   });
 }
-
-console.log('about js dziala');
