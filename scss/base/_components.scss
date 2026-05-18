@@ -1,0 +1,32 @@
+@use '../base/variables' as *;
+
+.link-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  font-size: $fs-sm;
+  font-family: $font-text;
+  color: $color-dark;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &__icon {
+    font-size: $fs-base;
+    transition: transform 0.3s ease;
+  }
+  &:hover {
+    color: lighten($color: $color-dark, $amount: 20%);
+
+    .link-action__icon {
+      transform: translateX(4px);
+    }
+  }
+}
