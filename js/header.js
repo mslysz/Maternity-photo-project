@@ -4,19 +4,22 @@ export default function initHeader() {
   const burgerBtn = el('.header__burger-btn');
   const closeBtn = el('.nav__close-btn');
   const nav = el('.nav');
+  const overlay = el('#js-nav-overlay');
 
-  if (!burgerBtn || !closeBtn || !nav) return;
+  if (!burgerBtn || !closeBtn || !nav || !overlay) return;
 
   const openMenu = () => {
     nav.classList.add('nav--open');
+    overlay.classList.add('nav-overlay--active');
     burgerBtn.classList.add('header__burger-btn--hide');
-    burgerBtn.setAttribute('aria-expanded', true);
+    burgerBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
     closeBtn.focus();
   };
 
   const closeMenu = () => {
     nav.classList.remove('nav--open');
+    overlay.classList.remove('nav-overlay--active');
     burgerBtn.classList.remove('header__burger-btn--hide');
     burgerBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
@@ -25,6 +28,7 @@ export default function initHeader() {
 
   burgerBtn.addEventListener('click', openMenu);
   closeBtn.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && nav.classList.contains('nav--open')) {
