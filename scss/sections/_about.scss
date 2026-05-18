@@ -3,6 +3,8 @@
 .about {
   padding-block: $space-6;
   &__image {
+    display: flex;
+    justify-content: center;
     opacity: 0;
     transform: translateY(200px);
     transition:

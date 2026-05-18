@@ -8,4 +8,28 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: $space-4;
+  &__content {
+    position: relative;
+    z-index: 2;
+    color: $color-light;
+    font-family: $font-heading;
+  }
+  &__title {
+    font-size: $fs-lg;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: $space-1;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    font-size: $fs-base;
+    font-style: italic;
+    opacity: 0.9;
+  }
 }
