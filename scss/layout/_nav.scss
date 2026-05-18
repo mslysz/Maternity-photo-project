@@ -54,8 +54,8 @@
     text-transform: uppercase;
     color: $color-dark;
     letter-spacing: $space-1;
-    font-size: $fs-sm;
-    padding: 0.5em 1.5em;
+    font-size: $fs-base;
+    padding: 1em 1.5em;
     font-family: $font-heading;
     word-break: break-word;
     font-weight: bold;
@@ -87,12 +87,14 @@
   width: 100vw;
   height: 100vh;
   background-color: rgb(0, 0, 0, 0.4);
-  z-index: 9;
+  z-index: 30;
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
   transition: opacity 0.4s ease;
   &--active {
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
   }
 }
