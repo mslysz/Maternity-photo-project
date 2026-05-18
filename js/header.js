@@ -1,23 +1,34 @@
 export default function initHeader() {
   const el = (selector) => document.querySelector(selector);
 
-  const burger = el('.header__burger');
-  const closeBurger = el('.nav__close-burger');
+  const burgerBtn = el('.header__burger-btn');
+  const closeBtn = el('.nav__close-btn');
   const nav = el('.nav');
 
-  const toggleMenu = () => {
-    nav.classList.toggle('nav--open');
-    burger.classList.toggle('header__burger--hide');
-    document.body.style.overflow = nav.classList.contains('nav--open')
-      ? 'hidden'
-      : '';
+  if (!burgerBtn || !closeBtn || !nav) return;
+
+  const openMenu = () => {
+    nav.classList.add('nav--open');
+    burgerBtn.classList.add('header__burger-btn--hide');
+    burgerBtn.setAttribute('aria-expanded', true);
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
   };
 
-  burger.addEventListener('click', toggleMenu);
-  closeBurger.addEventListener('click', toggleMenu);
+  const closeMenu = () => {
+    nav.classList.remove('nav--open');
+    burgerBtn.classList.remove('header__burger-btn--hide');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    burgerBtn.focus();
+  };
+
+  burgerBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && nav.classList.contains('nav--open')) {
-      toggleMenu();
+      closeMenu();
     }
   });
 }
