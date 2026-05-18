@@ -3,7 +3,6 @@
 .parallax {
   background-image: url('../../images/olivia-anne-snyder-SMALL.jpg');
   min-height: 300px;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -14,22 +13,32 @@
   align-items: center;
   text-align: center;
   padding: $space-4;
-  &__content {
+
+  &__quote {
+    margin: 0;
+    padding: 0;
     position: relative;
     z-index: 2;
     color: $color-light;
-    font-family: $font-heading;
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
   }
+
   &__title {
-    font-size: $fs-lg;
-    font-weight: 700;
+    font-family: $font-heading;
+    font-size: $fs-lgx;
+    font-weight: 500;
     letter-spacing: 2px;
-    margin-bottom: $space-1;
-    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
   }
   &__subtitle {
-    font-size: $fs-base;
-    font-style: italic;
+    font-family: $font-text;
+    font-size: $fs-sm;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     opacity: 0.9;
   }
 }
