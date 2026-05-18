@@ -14,9 +14,28 @@
   opacity: 0;
   pointer-events: none;
   z-index: 100;
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
   transform: translateX(100%);
   padding-top: 10px;
+
+  &__close-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    color: inherit;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 
   &__list {
     display: flex;
@@ -25,8 +44,9 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    // max-width: 260px;
+    width: 100%;
   }
+
   &__link {
     position: relative;
     display: block;
@@ -35,17 +55,17 @@
     color: $color-dark;
     letter-spacing: $space-1;
     font-size: $fs-sm;
-    padding: 0.5em;
+    padding: 0.5em 1.5em;
     font-family: $font-heading;
     word-break: break-word;
     font-weight: bold;
-    padding-left: 1.5em;
+
     &::after {
       content: '';
       position: absolute;
-      left: 0;
+      left: 1.5em;
+      right: 1.5em;
       bottom: -4px;
-      width: 100%;
       height: 1px;
       background: $color-dark;
     }
@@ -57,9 +77,5 @@
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
-  }
-  &__close-burger {
-    cursor: pointer;
-    margin-right: 10px;
   }
 }
