@@ -51,6 +51,7 @@
     flex-direction: column;
     height: 100%;
     opacity: 0;
+    padding-inline: $space-4;
     transform: translateY(40px);
     transition:
       opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),

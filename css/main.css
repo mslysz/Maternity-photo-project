@@ -485,6 +485,7 @@ img {
           flex-direction: column;
   height: 100%;
   opacity: 0;
+  padding-inline: 1.5rem;
   -webkit-transform: translateY(40px);
           transform: translateY(40px);
   -webkit-transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -540,4 +541,75 @@ img {
 }
 .maternity .link-action {
   margin-top: auto;
+}
+
+.testimonials {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../images/liv-bruce-M0oVPGsWk1E-SMALL.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/liv-bruce-M0oVPGsWk1E-SMALL.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-block: 3rem;
+}
+.testimonials__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+.testimonials__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  gap: 1.5rem;
+}
+.testimonials__img-wrapper {
+  padding-inline: 1.5rem;
+}
+.testimonials__avatar {
+  width: 100%;
+  max-width: 280px;
+  height: 100%;
+  aspect-ratio: 3/4;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.testimonials__quote {
+  text-transform: uppercase;
+  color: #f9f7f4;
+  font-size: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.testimonials__author {
+  color: #f9f7f4;
+  font-family: "Spectral, serif";
 }/*# sourceMappingURL=main.css.map */
