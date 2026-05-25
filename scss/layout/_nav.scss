@@ -19,7 +19,9 @@
     opacity 0.3s ease-in-out;
   transform: translateX(100%);
   padding-top: 10px;
-
+  @media (min-width: 768px) {
+    width: 40%;
+  }
   &__close-btn {
     background: none;
     border: none;
