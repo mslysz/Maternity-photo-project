@@ -7,9 +7,18 @@ body {
 }
 //burger menu icon
 .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
   font-size: $fs-lg;
-  color: #111;
+  display: inline-block;
   line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased; /* Wygładzanie czcionek na Safari/Mac */
 }
 
 img {

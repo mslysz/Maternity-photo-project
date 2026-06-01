@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use 'sass:color';
 
 .link-action {
   display: inline-flex;
@@ -23,7 +24,7 @@
     transition: transform 0.3s ease;
   }
   &:hover {
-    color: lighten($color: $color-dark, $amount: 20%);
+    color: color.mix($color-dark, #fff, 80%);
 
     .link-action__icon {
       transform: translateX(4px);

@@ -3,9 +3,11 @@
 @use 'base/globals';
 @use 'base/components';
 @use 'base/mixins';
+
 @use 'layout/container';
 @use 'layout/header';
 @use 'layout/nav';
+@use 'layout/footer';
 
 @use 'sections/hero';
 @use 'sections/about';
