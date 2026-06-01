@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .hero {
   height: 100dvh;
@@ -15,10 +16,7 @@
   }
 
   &__content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    @include flex-column-center;
     height: 100%;
     width: 100%;
     position: absolute;

@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .parallax {
   background-image: url('../../images/olivia-anne-snyder-SMALL.jpg');
@@ -8,9 +9,7 @@
   background-attachment: fixed;
   background-position: center;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-column-center;
   text-align: center;
   padding: $space-4;
 

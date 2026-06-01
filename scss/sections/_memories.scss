@@ -1,14 +1,12 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .memories {
   background-color: $color-beige;
   padding-block: $space-6;
   overflow: hidden;
   &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-column-center;
     padding-bottom: $space-6;
   }
   &__title {
@@ -37,7 +35,7 @@
     width: 100%;
     will-change: transform;
 
-    @media (min-width: 768px) {
+    @include tablet {
       gap: 50px;
     }
   }
@@ -50,7 +48,7 @@
       transform 0.4s ease,
       margin 0.4s ease;
 
-    @media (min-width: 768) {
+    @include tablet {
       flex: 0 0 calc((100% - (2 * 50px)) / 3);
     }
     img {
@@ -63,7 +61,7 @@
       z-index: 2;
       margin-inline: 5px;
 
-      @media (min-width: 768px) {
+      @include tablet {
         transform: scale(1.4);
         margin-inline: 40px;
       }

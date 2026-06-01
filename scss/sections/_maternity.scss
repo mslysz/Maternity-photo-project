@@ -1,12 +1,10 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .maternity {
   padding-block: $space-6;
   &__header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-column-center;
     opacity: 0;
     transform: translateY(50px);
     transition:
