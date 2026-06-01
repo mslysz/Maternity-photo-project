@@ -2,7 +2,7 @@
 @use 'base/variables';
 @use 'base/globals';
 @use 'base/components';
-
+@use 'base/mixins';
 @use 'layout/container';
 @use 'layout/header';
 @use 'layout/nav';
@@ -14,3 +14,4 @@
 @use 'sections/testimonials';
 @use 'sections/philosophy';
 @use 'sections/memories';
+@use 'sections/blog';

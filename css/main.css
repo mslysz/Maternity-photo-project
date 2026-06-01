@@ -994,4 +994,99 @@ img {
 .memories__btn--next:active {
   -webkit-transform: translateX(4px);
           transform: translateX(4px);
+}
+
+.blog {
+  background-color: #f3efeb;
+  padding-block: 3rem;
+}
+.blog__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 3rem;
+}
+.blog__title {
+  font-family: "Cormorant Garamond", serif;
+  color: #1a1a1a;
+  padding-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+.blog__grid {
+  display: grid;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .blog__grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+}
+.blog__card {
+  padding-block: 0.5rem;
+}
+.blog__image-wrapper {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.blog__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog__subtitle {
+  font-family: "Spectral, serif";
+  color: #4d4d4d;
+  font-style: italic;
+}
+.blog__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-block: 1.5rem;
+}
+.blog__post-title {
+  text-align: center;
+  font-family: "Spectral, serif";
+  color: #4d4d4d;
+  padding-bottom: 1.5rem;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.blog__button {
+  border: 1px solid #1a1a1a;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-family: "Spectral, serif";
+  cursor: pointer;
+  color: #4d4d4d;
+  display: inline-block;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+.blog__button:hover {
+  color: #1a1a1a;
 }/*# sourceMappingURL=main.css.map */
