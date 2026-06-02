@@ -6,13 +6,20 @@
   position: relative;
 
   &__images {
+    display: flex;
     height: 100%;
+    width: 100%;
   }
   &__image {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+
+    &--second {
+      display: none;
+    }
   }
 
   &__content {
@@ -22,17 +29,31 @@
     width: 100%;
     position: absolute;
     top: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.282);
+    padding: 0 20px;
+    z-index: 2;
   }
-  &__title,
+  &__title {
+    font-family: $font-heading;
+    color: $color-light;
+    margin-bottom: 15px;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    line-height: 1.2;
+  }
+
   &__text {
     font-family: $font-heading;
     color: $color-light;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-style: italic;
   }
-  &__title {
-    margin-bottom: 10px;
-  }
-  &__text {
-    font-size: $fs-base;
+  @include desktop {
+    &__image {
+      width: 50%;
+      &--second {
+        display: block;
+      }
+    }
   }
 }
