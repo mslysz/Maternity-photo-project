@@ -54,12 +54,18 @@
   }
   &__burger-text {
     display: none;
-    @include desktop {
+
+    @include tablet {
       display: inline-block;
       font-family: $font-heading;
-      font-size: 0.85rem;
+      font-size: $fs-xs;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
       font-weight: 500;
-      letter-spacing: 1px;
+    }
+    @include desktop {
+      font-size: $fs-sm;
+      letter-spacing: 2px;
     }
   }
 }

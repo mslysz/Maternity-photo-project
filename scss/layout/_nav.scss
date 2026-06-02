@@ -20,9 +20,7 @@
     opacity 0.3s ease-in-out;
   transform: translateX(100%);
   padding-top: 10px;
-  @include tablet {
-    width: 40%;
-  }
+
   &__close-btn {
     background: none;
     border: none;
@@ -45,7 +43,7 @@
     flex-direction: column;
     gap: $space-2;
     list-style: none;
-    margin: 0;
+    margin: 30px 0 0 0;
     padding: 0;
     width: 100%;
   }
@@ -62,6 +60,7 @@
     font-family: $font-heading;
     word-break: break-word;
     font-weight: bold;
+    transition: color 0.3 ease;
 
     &::after {
       content: '';
@@ -71,6 +70,11 @@
       bottom: -4px;
       height: 1px;
       background: $color-dark;
+      transition: transform 0.3s ease;
+      transform: scaleX(1);
+    }
+    &:hover {
+      color: $color-primary;
     }
     &--no-underline::after {
       display: none;
@@ -80,6 +84,86 @@
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
+  }
+
+  @include tablet {
+    width: 45%;
+    padding-top: 20px;
+    &__close-btn {
+      margin-right: 25px;
+    }
+    &__list {
+      margin-top: 50px;
+      gap: $space-3;
+    }
+    &__link {
+      font-size: $fs-md;
+      padding: 1.2em 2em;
+      &::after {
+        left: 2em;
+        right: 2em;
+      }
+    }
+  }
+  @include desktop {
+    width: 30%;
+    padding-top: 25px;
+    &__close-btn {
+      margin-right: 35px;
+    }
+    &__list {
+      margin-top: 70px;
+      gap: $space-4;
+    }
+    &__link {
+      font-size: $fs-lg;
+      font-weight: 300;
+      letter-spacing: 2px;
+      padding: 1em 2.5em;
+      &::after {
+        left: 2.5em;
+        right: 2.5em;
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+        background: $color-primary;
+      }
+    }
+  }
+  @media (orientation: landscape) and (max-height: 500px) {
+    width: 60%;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    justify-content: space-between;
+
+    &__close-btn {
+      margin-top: 5px;
+      margin-right: 15px;
+      position: absolute;
+      top: 10px;
+      right: 0;
+    }
+
+    &__list {
+      margin-top: 50px;
+      gap: 0;
+    }
+
+    &__link {
+      padding: 0.6em 1.5em;
+      font-size: $fs-sm;
+      font-weight: bold;
+
+      &::after {
+        left: 1.5em;
+        right: 1.5em;
+        bottom: 2px;
+        transform: scaleX(1);
+      }
+    }
   }
 }
 
