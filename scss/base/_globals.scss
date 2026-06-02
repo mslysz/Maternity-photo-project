@@ -1,9 +1,12 @@
 @use 'variables' as *;
+@use '../base/mixins' as *;
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: $color-light;
   font-family: $font-main;
-  scroll-behavior: smooth;
 }
 //burger menu icon
 .material-symbols-outlined {
@@ -18,11 +21,31 @@ body {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-  -webkit-font-smoothing: antialiased; /* Wygładzanie czcionek na Safari/Mac */
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.scroll-arrow {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 0.1em;
+  background-color: $color-beige;
+  border: none;
+  z-index: 99;
+  @include flex-column-center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.scroll-arrow.show {
+  opacity: 1;
+  pointer-events: auto;
 }
