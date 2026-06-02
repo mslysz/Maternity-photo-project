@@ -4,6 +4,7 @@
 .hero {
   height: 100dvh;
   position: relative;
+  overflow: hidden;
 
   &__images {
     display: flex;
@@ -48,12 +49,36 @@
     font-size: clamp(1rem, 2vw, 1.25rem);
     font-style: italic;
   }
+  @include tablet {
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
   @include desktop {
     &__image {
       width: 50%;
       &--second {
         display: block;
       }
+    }
+    &__content {
+      background-color: rgba(0, 0, 0, 0.35);
+    }
+  }
+  @media (orientation: landscape) and (max-height: 500px) {
+    &__content {
+      padding: 0 40px;
+      justify-content: center;
+    }
+
+    &__title {
+      font-size: $fs-md;
+      margin-bottom: $space-2;
+      letter-spacing: 2px;
+    }
+
+    &__text {
+      font-size: $fs-sm;
     }
   }
 }

@@ -3,11 +3,18 @@
 
 .about {
   padding-block: $space-6;
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+  }
+
   &__image {
     display: flex;
     justify-content: center;
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(100px);
     transition:
       opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
       transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -56,5 +63,77 @@
     margin-top: $space-4;
     display: flex;
     justify-content: center;
+  }
+  @include tablet {
+    padding-block: $space-7;
+    &__title {
+      font-size: $fs-lg;
+      margin-bottom: $space-5;
+    }
+    &__text {
+      font-size: $fs-base;
+      max-width: 650px;
+      margin-inline: auto;
+    }
+  }
+  @include desktop {
+    &__grid {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: $space-6;
+    }
+    &__image {
+      width: 45%;
+      justify-content: flex-start;
+    }
+
+    &__content {
+      width: 50%;
+      text-align: left;
+    }
+
+    &__text {
+      margin-inline: 0;
+    }
+
+    &__contact {
+      justify-content: flex-start;
+    }
+  }
+  @media (orientation: landscape) and (max-height: 500px) {
+    padding-block: $space-4;
+
+    &__grid {
+      flex-direction: row;
+      align-items: center;
+      gap: $space-4;
+    }
+
+    &__image {
+      width: 35%;
+      transform: translateY(40px);
+    }
+
+    &__content {
+      width: 65%;
+      text-align: left;
+      transform: translateY(30px);
+    }
+
+    &__title {
+      font-size: $fs-md;
+      margin-bottom: $space-2;
+    }
+
+    &__text {
+      font-size: $fs-sm;
+      margin-bottom: $space-2;
+    }
+
+    &__contact {
+      margin-top: $space-2;
+      justify-content: flex-start;
+    }
   }
 }
