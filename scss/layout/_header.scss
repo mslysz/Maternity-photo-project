@@ -11,9 +11,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 10px;
+  color: $color-light;
   transition:
     top 0.4s ease-in-out,
-    background-color 0.4s ease-in-out;
+    background-color 0.4s ease-in-out,
+    color 0.4s ease-in-out;
   transform: translate(0);
 
   &--hidden {
@@ -25,6 +27,7 @@
     backdrop-filter: blur(8px);
     padding: 10px 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    color: $color-dark;
   }
   &__logo {
     height: 20px;
@@ -48,5 +51,15 @@
   }
   &__burger {
     display: block;
+  }
+  &__burger-text {
+    display: none;
+    @include desktop {
+      display: inline-block;
+      font-family: $font-heading;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
   }
 }
