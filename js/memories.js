@@ -10,6 +10,7 @@ export default function initMemories() {
 
   let isTransitioning = false;
   let autoPlayTimer = null;
+  let interactionTimeout = null;
 
   const AUTO_PLAY_SPEED = 3000;
   const PAUSE_DURATION = 5000;
@@ -81,16 +82,16 @@ export default function initMemories() {
   }
 
   function stopAutoPlay() {
-    if (autoPlayTimer) {
-      clearInterval(autoPlayTimer);
-    }
+    if (autoPlayTimer) clearInterval(autoPlayTimer);
   }
 
   function handleUserInteraction(action) {
     stopAutoPlay();
+    if (interactionTimeout) clearTimeout(interactionTimeout);
+
     action();
 
-    setTimeout(startAutoPlay, PAUSE_DURATION);
+    interactionTimeout = setTimeout(startAutoPlay, PAUSE_DURATION);
   }
 
   nextBtn.addEventListener('click', () => handleUserInteraction(moveNext));

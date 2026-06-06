@@ -40,16 +40,16 @@
   }
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: stretch;
-    gap: 40px;
+    gap: $space-5;
   }
   &__card {
     display: flex;
     flex-direction: column;
     height: 100%;
     opacity: 0;
-    padding-inline: $space-4;
+    padding-inline: $space-3;
     transform: translateY(40px);
     transition:
       opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
@@ -91,5 +91,44 @@
   }
   .link-action {
     margin-top: auto;
+  }
+  @include tablet {
+    padding-block: $space-7;
+    &__description {
+      font-size: $fs-base;
+    }
+    &__card {
+      padding-inline: $space-4;
+    }
+  }
+  @include desktop {
+    &__grid {
+      gap: $space-6;
+    }
+  }
+
+  @media (orientation: landscape) and (max-height: 500px) {
+    padding-block: $space-4;
+    &__header {
+      transform: translateY(25px);
+
+      &--visible {
+        transform: translateY(0);
+      }
+    }
+    &__description {
+      margin-bottom: $space-4;
+    }
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $space-3;
+    }
+    &__card {
+      padding-inline: $space-2;
+      transform: translateY(20px);
+      &--visible {
+        transform: translateY(0);
+      }
+    }
   }
 }

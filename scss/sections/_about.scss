@@ -91,6 +91,7 @@
     &__content {
       width: 50%;
       text-align: left;
+      padding-block: 0;
     }
 
     &__text {
@@ -113,12 +114,19 @@
     &__image {
       width: 35%;
       transform: translateY(40px);
+      &--visible {
+        transform: translateY(0);
+      }
     }
 
     &__content {
       width: 65%;
       text-align: left;
       transform: translateY(30px);
+      padding-block: 0;
+      &--visible {
+        transform: translateY(0);
+      }
     }
 
     &__title {

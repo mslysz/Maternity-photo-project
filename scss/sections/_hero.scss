@@ -32,13 +32,13 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.282);
-    padding: 0 20px;
+    padding-inline: $space-4;
     z-index: 2;
   }
   &__title {
     font-family: $font-heading;
     color: $color-light;
-    margin-bottom: 15px;
+    margin-bottom: $space-3;
     font-size: clamp(1.8rem, 5vw, 3.5rem);
     line-height: 1.2;
   }
@@ -49,9 +49,10 @@
     font-size: clamp(1rem, 2vw, 1.25rem);
     font-style: italic;
   }
+
   @include tablet {
     &__title {
-      margin-bottom: 20px;
+      margin-bottom: $space-4;
     }
   }
   @include desktop {
@@ -65,9 +66,10 @@
       background-color: rgba(0, 0, 0, 0.35);
     }
   }
+
   @media (orientation: landscape) and (max-height: 500px) {
     &__content {
-      padding: 0 40px;
+      padding-inline: $space-5;
       justify-content: center;
     }
 

@@ -4,9 +4,6 @@
 .philosophy {
   padding-block: $space-5;
 
-  @media (min-width: 1024px) {
-    padding-block: $space-6;
-  }
   &__grid {
     display: grid;
     gap: $space-5;
@@ -23,12 +20,6 @@
         opacity: 1;
         transform: scale(1);
       }
-    }
-    @media (min-width: 768px) {
-      grid-template-columns: 1fr 1fr;
-    }
-    @media (min-width: 1024px) {
-      gap: $space-6;
     }
   }
 
@@ -73,28 +64,12 @@
     line-height: 1.75;
     text-align: center;
     margin-bottom: 0;
-
-    @include tablet {
-      font-size: $fs-md;
-    }
   }
 
-  @include tablet {
-    &__title,
-    &__subtitle,
-    &__text {
-      text-align: left;
-    }
-  }
   &__images {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: $space-3;
-
-    @include desktop {
-      gap: $space-4;
-      align-items: flex-start;
-    }
   }
   &__image {
     overflow: hidden;
@@ -103,11 +78,6 @@
     }
     &:nth-of-type(2) .philosophy__img {
       transition-delay: 0.6s;
-    }
-    @include desktop {
-      &:nth-of-type(2) {
-        transform: translateY(40px);
-      }
     }
   }
   &__img {
@@ -120,11 +90,62 @@
     transition:
       opacity 1.4s cubic-bezier(0.25, 0.1, 0.25, 1),
       transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
-    @include desktop {
-      &:hover {
+  }
+
+  @include tablet {
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    &__title,
+    &__subtitle,
+    &__text {
+      text-align: left;
+    }
+
+    &__text {
+      font-size: $fs-md;
+    }
+  }
+  @include desktop {
+    padding-block: $space-6;
+
+    &__grid {
+      gap: $space-6;
+    }
+
+    &__images {
+      gap: $space-4;
+    }
+
+    &__image {
+      &:nth-of-type(2) {
+        transform: translateY(40px);
+      }
+    }
+
+    &__grid--visible {
+      .philosophy__img:hover {
         transform: scale(1.03);
         transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
       }
+    }
+  }
+  @media (orientation: landscape) and (max-height: 500px) {
+    padding-block: $space-4;
+
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: $space-4;
+    }
+
+    &__text {
+      font-size: $fs-sm;
+    }
+
+    &__image:nth-of-type(2) {
+      transform: translateY(0);
     }
   }
 }
