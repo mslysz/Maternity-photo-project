@@ -1,2 +1,80 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
+
+.maternity-page {
+  padding-block: $space-6;
+  &__content {
+    @include flex-column-center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(70px);
+    transition:
+      opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+      transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    &--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &__title {
+    font-size: $fs-lgx;
+    color: $color-dark;
+    font-family: $font-heading;
+    margin-bottom: $space-3;
+  }
+  &__subtitle {
+    font-size: $fs-xs;
+    color: $color-dark;
+    letter-spacing: 1px;
+    font-family: $font-text;
+    font-weight: lighter;
+    margin-bottom: $space-3;
+  }
+  &__description {
+    font-family: $font-text;
+    font-size: $fs-sm;
+    color: $color-grey;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: $space-4;
+  }
+  &__text {
+    color: $color-muted;
+    font-family: $font-text;
+    font-size: $fs-sm;
+    margin-bottom: $space-4;
+    line-height: 1.6;
+
+    &--italic {
+      font-style: italic;
+    }
+  }
+  &__showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: $space-3;
+    opacity: 0;
+    transform: translateY(100px);
+    transition:
+      opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+      transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+    &--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  @include desktop {
+    .maternity-page__showcase {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-4;
+    }
+  }
+}
