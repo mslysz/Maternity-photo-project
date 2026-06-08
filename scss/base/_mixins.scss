@@ -32,3 +32,13 @@
   justify-content: center;
   align-items: center;
 }
+
+//animation
+@mixin fade-in-up {
+  opacity: 0;
+  transform: translateY(70px);
+  will-change: opacity, transform;
+  transition:
+    opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+    transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}

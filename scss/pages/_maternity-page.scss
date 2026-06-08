@@ -5,12 +5,9 @@
   padding-block: $space-6;
   &__content {
     @include flex-column-center;
+    @include fade-in-up;
+    transition-delay: 0.1s;
     text-align: center;
-    opacity: 0;
-    transform: translateY(70px);
-    transition:
-      opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
-      transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
     &--visible {
       opacity: 1;
       transform: translateY(0);
@@ -52,14 +49,9 @@
   &__showcase {
     display: grid;
     grid-template-columns: 1fr;
-    align-items: stretch;
     gap: $space-3;
-    opacity: 0;
-    transform: translateY(100px);
-    transition:
-      opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
-      transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-
+    @include fade-in-up;
+    transition-delay: 0.3s;
     &--visible {
       opacity: 1;
       transform: translateY(0);
@@ -71,10 +63,73 @@
       display: block;
     }
   }
+  @include tablet {
+    .maternity-page {
+      &__content {
+        max-width: 700px;
+        margin-inline: auto;
+      }
+
+      &__description {
+        font-size: $fs-base;
+      }
+
+      &__showcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-4;
+      }
+    }
+  }
   @include desktop {
-    .maternity-page__showcase {
-      grid-template-columns: repeat(2, 1fr);
-      gap: $space-4;
+    .maternity-page {
+      padding-block: $space-7;
+
+      &__content {
+        max-width: 800px;
+      }
+
+      &__title {
+        font-size: $fs-xl;
+      }
+
+      &__description {
+        font-size: $fs-base;
+        line-height: 1.7;
+      }
+
+      &__showcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-5;
+        align-items: center;
+      }
+    }
+  }
+  @media (orientation: landscape) and (max-height: 500px) {
+    .maternity-page {
+      padding-block: $space-4;
+
+      &__content {
+        transform: translateY(25px);
+
+        &--visible {
+          transform: translateY(0);
+        }
+      }
+
+      &__description {
+        margin-bottom: $space-4;
+        font-size: $fs-sm;
+      }
+
+      &__showcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-3;
+        align-items: center;
+      }
+
+      &__title {
+        font-size: $fs-lg;
+      }
     }
   }
 }
