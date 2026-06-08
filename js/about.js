@@ -5,6 +5,10 @@ export default function initAbout() {
   const aboutImage = el('.about__image');
   const aboutText = el('.about__content');
 
+  if (!aboutSection || !aboutImage || !aboutText) {
+    return;
+  }
+
   window.addEventListener('scroll', () => {
     const vh = window.innerHeight;
     if (aboutSection) {
