@@ -2048,18 +2048,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
   width: 100%;
   max-width: 100%;
   gap: 1.5rem;
-  overflow: hidden;
-  padding-inline: 2rem;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  margin: 0;
 }
-.maternity-parallax__avatar {
+.maternity-parallax__image {
   width: 100%;
   max-width: 220px;
   height: auto;
@@ -2076,7 +2070,6 @@ img {
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   letter-spacing: 1.5px;
-  text-align: center;
   margin: 0 auto;
   line-height: 1.7;
   max-width: 320px;
@@ -2091,11 +2084,15 @@ img {
 .maternity-parallax__author {
   color: #f9f7f4;
   font-family: "Spectral, serif";
+  font-style: italic;
 }
 @media (min-width: 768px) {
   .maternity-parallax {
     min-height: 350px;
     padding-block: 3rem;
+  }
+  .maternity-parallax__image {
+    max-width: 220px;
   }
 }
 @media (min-width: 1024px) {
@@ -2106,15 +2103,12 @@ img {
   .maternity-parallax__testimonial {
     max-width: 700px;
   }
+  .maternity-parallax__image {
+    max-width: 240px;
+  }
   .maternity-parallax__quote {
     max-width: 500px;
     font-size: 1.75rem;
-  }
-}
-@media (min-width: 1024px) {
-  .maternity-parallax {
-    min-height: 400px;
-    background-attachment: fixed;
   }
 }
 @media (orientation: landscape) and (max-height: 500px) {
@@ -2128,5 +2122,121 @@ img {
   .maternity-parallax__quote {
     font-size: 0.875rem;
     max-width: 600px;
+  }
+}
+
+.maternity-slideshow {
+  padding: 2rem 0;
+  overflow: hidden;
+  position: relative;
+}
+.maternity-slideshow__wrapper {
+  width: 100%;
+  padding-inline: 1.5rem;
+}
+.maternity-slideshow__carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  margin-inline: -1.5rem;
+  padding-inline: 1.5rem;
+  overflow-x: visible;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+.maternity-slideshow__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 65%;
+          flex: 0 0 65%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  aspect-ratio: 4/5;
+}
+.maternity-slideshow__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.maternity-slideshow__controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-inline: 0.5rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.maternity-slideshow__btn {
+  pointer-events: auto;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #1a1a1a;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.maternity-slideshow__btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 768px) {
+  .maternity-slideshow__wrapper {
+    padding-inline: 2rem;
+  }
+  .maternity-slideshow__carousel {
+    margin-inline: -2rem;
+    padding-inline: 2rem;
+  }
+  .maternity-slideshow__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
+}
+@media (min-width: 1024px) {
+  .maternity-slideshow {
+    padding: 3rem 0;
+  }
+  .maternity-slideshow__wrapper {
+    padding-inline: 3rem;
+  }
+  .maternity-slideshow__carousel {
+    margin-inline: -3rem;
+    padding-inline: 3rem;
+  }
+  .maternity-slideshow__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 32%;
+            flex: 0 0 32%;
+  }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .maternity-slideshow {
+    padding: 0.5rem 0;
+  }
+  .maternity-slideshow__carousel {
+    margin-inline: -1.5rem;
+    padding-inline: 1.5rem;
+  }
+  .maternity-slideshow__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
   }
 }/*# sourceMappingURL=main.css.map */
