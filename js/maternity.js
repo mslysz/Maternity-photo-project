@@ -101,4 +101,47 @@ export default function initMaternity() {
 
   carousel.style.transform = `translateX(${-getPaddingOffset()}px)`;
   startAutoPlay();
+
+  // ACCORDION FAQ
+
+  const faqContainer = el('.maternity-questions');
+
+  if (faqContainer) {
+    faqContainer.addEventListener('click', (e) => {
+      const button = e.target.closest('.maternity-questions__header');
+      if (!button) return;
+
+      const parent = button.closest('.maternity-questions__question');
+      const content = parent.querySelector('.maternity-questions__content');
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      allEl('.maternity-questions__question').forEach((item) => {
+        if (item !== parent) {
+          item.classList.remove('maternity-questions__question--active');
+
+          const header = item.querySelector('.maternity-questions__header');
+          if (header) header.setAttribute('aria-expanded', 'false');
+
+          const itemContent = item.querySelector(
+            '.maternity-questions__content',
+          );
+          if (itemContent) {
+            itemContent.style.maxHeight = '0px';
+          }
+        }
+      });
+
+      if (isExpanded) {
+        parent.classList.remove('maternity-questions__question--active');
+        button.setAttribute('aria-expanded', 'false');
+
+        content.style.maxHeight = '0px';
+      } else {
+        parent.classList.add('maternity-questions__question--active');
+        button.setAttribute('aria-expanded', 'true');
+
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  }
 }
