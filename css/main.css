@@ -2239,4 +2239,124 @@ img {
         -ms-flex: 0 0 40%;
             flex: 0 0 40%;
   }
+}
+
+.maternity-questions {
+  padding-block: 3rem;
+}
+.maternity-questions .container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .maternity-questions .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .maternity-questions .container {
+    grid-template-columns: 40% 1fr;
+    gap: 5rem;
+  }
+}
+.maternity-questions__img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4/5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .maternity-questions__img {
+    position: sticky;
+    top: 120px;
+  }
+}
+.maternity-questions__heading {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+.maternity-questions__question {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.maternity-questions__question--active .maternity-questions__content {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 1rem;
+}
+.maternity-questions__question--active .maternity-questions__icon {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.maternity-questions__header {
+  width: 100%;
+  padding-block: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+.maternity-questions__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+.maternity-questions__icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+  color: #1a1a1a;
+  -webkit-transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+}
+.maternity-questions__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.3s;
+  transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.3s;
+}
+.maternity-questions__answer {
+  padding-bottom: 1rem;
+  font-family: "Spectral, serif";
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #4d4d4d;
+}
+@media (min-width: 768px) {
+  .maternity-questions__heading {
+    font-size: 2.2rem;
+  }
+  .maternity-questions__title {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .maternity-questions__heading {
+    margin-bottom: 2rem;
+  }
+  .maternity-questions__answer {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

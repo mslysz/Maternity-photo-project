@@ -335,3 +335,126 @@
     }
   }
 }
+
+.maternity-questions {
+  padding-block: $space-6;
+
+  .container {
+    display: grid;
+    gap: $space-5;
+    grid-template-columns: 1fr;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: $space-6;
+    }
+
+    @include desktop {
+      grid-template-columns: 40% 1fr;
+      gap: $space-7;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    @include desktop {
+      position: sticky;
+      top: 120px;
+    }
+  }
+
+  &__heading {
+    font-family: $font-heading;
+    font-size: $fs-lg;
+    color: $color-dark;
+    margin-bottom: $space-4;
+  }
+
+  &__question {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &--active {
+      .maternity-questions__content {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        margin-bottom: $space-3;
+      }
+      .maternity-questions__icon {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__header {
+    width: 100%;
+    padding-block: $space-3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $space-3;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: $fs-base;
+    color: $color-dark;
+    line-height: 1.4;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1;
+    color: $color-dark;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      visibility 0.3s;
+  }
+
+  &__answer {
+    padding-bottom: $space-3;
+    font-family: $font-text;
+    font-size: $fs-sm;
+    line-height: 1.7;
+    color: $color-grey;
+  }
+
+  @include tablet {
+    &__heading {
+      font-size: $fs-lgx;
+    }
+    &__title {
+      font-size: $fs-md;
+    }
+  }
+
+  @include desktop {
+    &__heading {
+      margin-bottom: $space-5;
+    }
+    &__answer {
+      font-size: $fs-base;
+    }
+  }
+}
