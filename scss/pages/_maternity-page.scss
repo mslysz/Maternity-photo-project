@@ -343,16 +343,12 @@
     display: grid;
     gap: $space-5;
     grid-template-columns: 1fr;
+    align-items: start;
+  }
 
-    @include tablet {
-      grid-template-columns: 1fr 1fr;
-      gap: $space-6;
-    }
-
-    @include desktop {
-      grid-template-columns: 40% 1fr;
-      gap: $space-7;
-    }
+  &__image {
+    width: 100%;
+    display: block;
   }
 
   &__img {
@@ -360,11 +356,10 @@
     display: block;
     aspect-ratio: 4 / 5;
     object-fit: cover;
+  }
 
-    @include desktop {
-      position: sticky;
-      top: 120px;
-    }
+  &__container {
+    width: 100%;
   }
 
   &__heading {
@@ -374,18 +369,20 @@
     margin-bottom: $space-4;
   }
 
+  &__heading-item {
+    margin: 0;
+  }
+
   &__question {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     &--active {
-      .maternity-questions__content {
-        max-height: 500px;
-        opacity: 1;
-        visibility: visible;
-        margin-bottom: $space-3;
-      }
       .maternity-questions__icon {
         transform: rotate(45deg);
+      }
+
+      .maternity-questions__content {
+        opacity: 1;
       }
     }
   }
@@ -416,20 +413,16 @@
     font-weight: 300;
     line-height: 1;
     color: $color-dark;
-    transition:
-      transform 0.3s ease,
-      color 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
   &__content {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    visibility: hidden;
     transition:
       max-height 0.4s ease,
-      opacity 0.3s ease,
-      visibility 0.3s;
+      opacity 0.3s ease;
   }
 
   &__answer {
@@ -441,20 +434,60 @@
   }
 
   @include tablet {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      gap: $space-6;
+    }
+
     &__heading {
       font-size: $fs-lgx;
     }
+
     &__title {
       font-size: $fs-md;
     }
   }
 
   @include desktop {
+    .container {
+      grid-template-columns: 40% 1fr;
+      gap: $space-7;
+    }
+
+    &__img {
+      position: sticky;
+      top: 120px;
+    }
+
     &__heading {
       margin-bottom: $space-5;
     }
+
     &__answer {
       font-size: $fs-base;
+    }
+  }
+
+  @media (orientation: landscape) and (max-height: 500px) {
+    &__img {
+      max-height: 160px;
+      width: 100%;
+      object-fit: cover;
+      position: static; // 🔥 FIX
+    }
+
+    .container {
+      grid-template-columns: 40% 1fr;
+      gap: $space-3;
+    }
+
+    &__heading {
+      font-size: $fs-base;
+      margin-bottom: $space-2;
+    }
+
+    &__title {
+      font-size: $fs-sm;
     }
   }
 }
