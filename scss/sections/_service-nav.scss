@@ -1,0 +1,129 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.service-nav {
+  position: relative;
+  background-image: url('../../images/arun-prakash-joVw83c01-s-SMALL.jpg');
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+
+  @include flex-column-center;
+  text-align: center;
+  padding: $space-5 $space-4;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba($color-dark, 0.25);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subtitle {
+    font-family: $font-text;
+    font-size: $fs-xs;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $color-light;
+    opacity: 0.6;
+    margin-bottom: $space-2;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: $fs-lgx;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: $color-light;
+    margin: 0 0 $space-3 0;
+  }
+
+  .service-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: $space-4 0 0 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    align-items: center;
+  }
+
+  .service-nav__link {
+    font-family: $font-heading;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $color-light;
+    text-decoration: none;
+
+    opacity: 0.9;
+    position: relative;
+
+    display: inline-block;
+    padding-bottom: 10px;
+
+    transition: all 0.3s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 320px;
+      height: 1px;
+      background: $color-light;
+      opacity: 0.25;
+    }
+
+    &:hover {
+      opacity: 1;
+      transform: translateX(6px);
+    }
+  }
+
+  @include tablet {
+    min-height: 350px;
+    padding: $space-6 $space-4;
+
+    &__title {
+      font-size: $fs-xl;
+    }
+  }
+
+  @include desktop {
+    min-height: 400px;
+    background-attachment: fixed;
+
+    &__title {
+      font-size: $fs-xxl;
+    }
+  }
+
+  @media (orientation: landscape) and (max-height: 500px) {
+    min-height: 220px;
+    padding: $space-3 $space-4;
+
+    &__title {
+      font-size: $fs-md;
+    }
+
+    &__subtitle {
+      font-size: $fs-xs;
+    }
+  }
+}
