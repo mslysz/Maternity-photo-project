@@ -7,7 +7,7 @@ export default function initHeader() {
   const nav = el('.nav');
   const overlay = el('#js-nav-overlay');
 
-  if (!burgerBtn || !closeBtn || !nav || !overlay) return;
+  if (!header || !burgerBtn || !closeBtn || !nav || !overlay) return;
 
   const openMenu = () => {
     nav.classList.add('nav--open');

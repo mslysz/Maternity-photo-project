@@ -5,6 +5,7 @@ import initTestimonials from './testimonials.js';
 import initPhilosophy from './philosophy.js';
 import initMemories from './memories.js';
 import initScroll from './scroll.js';
+import initShowcase from './revealAnimations.js';
 
 initHeader();
 initAbout();
@@ -13,3 +14,4 @@ initTestimonials();
 initPhilosophy();
 initMemories();
 initScroll();
+initShowcase();
