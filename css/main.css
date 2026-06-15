@@ -1079,10 +1079,7 @@ img {
 }
 .maternity__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 .maternity__card {
@@ -1153,19 +1150,25 @@ img {
   margin-top: auto;
 }
 @media (min-width: 768px) {
-  .maternity {
-    padding-block: 5rem;
+  .maternity__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .maternity__description {
-    font-size: 1rem;
-  }
-  .maternity__card {
-    padding-inline: 1.5rem;
+  .maternity__card:nth-child(3) {
+    grid-column: 1/-1;
+    max-width: 60%;
+    margin-inline: auto;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 }
 @media (min-width: 1024px) {
   .maternity__grid {
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .maternity__card:nth-child(3) {
+    grid-column: auto;
+    max-width: none;
+    margin-inline: 0;
   }
 }
 @media (orientation: landscape) and (max-height: 500px) {
