@@ -6,6 +6,7 @@ import initPhilosophy from './philosophy.js';
 import initMemories from './memories.js';
 import initScroll from './scroll.js';
 import initShowcase from './revealAnimations.js';
+import initStudioBaby from './studio-baby.js';
 
 initHeader();
 initAbout();
@@ -15,3 +16,4 @@ initPhilosophy();
 initMemories();
 initScroll();
 initShowcase();
+initStudioBaby();

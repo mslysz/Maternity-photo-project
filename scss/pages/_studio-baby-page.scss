@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
-.maternity-page {
+.studio-baby-page {
   padding-block: $space-6;
   &__content {
     @include flex-column-center;
@@ -64,7 +64,7 @@
     }
   }
   @include tablet {
-    .maternity-page {
+    .studio-baby-page {
       &__content {
         max-width: 700px;
         margin-inline: auto;
@@ -80,7 +80,7 @@
     }
   }
   @include desktop {
-    .maternity-page {
+    .studio-baby-page {
       padding-block: $space-7;
 
       &__content {
@@ -104,7 +104,7 @@
     }
   }
   @media (orientation: landscape) and (max-height: 500px) {
-    .maternity-page {
+    .studio-baby-page {
       padding-block: $space-4;
 
       &__content {
@@ -133,7 +133,7 @@
   }
 }
 
-.maternity-parallax {
+.studio-baby-parallax {
   position: relative;
   background-image: url('../../images/juan-encalada-SCteCA0Mf1A-SMALL.jpg');
   min-height: 300px;
@@ -234,7 +234,7 @@
   }
 }
 
-.maternity-slideshow {
+.studio-baby-slideshow {
   padding: $space-5 0;
   overflow: hidden;
   position: relative;
@@ -335,7 +335,7 @@
   }
 }
 
-.maternity-questions {
+.studio-baby-questions {
   padding-block: $space-6;
 
   .container {
@@ -376,11 +376,11 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     &--active {
-      .maternity-questions__icon {
+      .studio-baby-questions__icon {
         transform: rotate(45deg);
       }
 
-      .maternity-questions__content {
+      .studio-baby-questions__content {
         opacity: 1;
       }
     }
@@ -473,7 +473,7 @@
       max-height: 160px;
       width: 100%;
       object-fit: cover;
-      position: static; // 🔥 FIX
+      position: static;
     }
 
     .container {
