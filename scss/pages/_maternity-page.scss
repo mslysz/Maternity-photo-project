@@ -310,7 +310,8 @@
   }
 
   @include desktop {
-    padding: $space-6 0;
+    padding-block: $space-6;
+
     &__wrapper {
       padding-inline: $space-6;
     }
@@ -320,6 +321,35 @@
     }
     &__image {
       flex: 0 0 32%;
+    }
+
+    &__controls {
+      position: static;
+      transform: none;
+      margin-top: $space-4;
+      margin-inline: auto;
+      max-width: 1200px;
+      padding-inline: $space-6;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+
+    &__btn {
+      pointer-events: auto;
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: $color-muted;
+      padding: $space-2 $space-5;
+      font-size: $fs-base;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.03);
+        border-color: $color-grey;
+        color: $color-dark;
+        transform: translateY(-1px);
+      }
     }
   }
 
@@ -331,6 +361,15 @@
     }
     &__image {
       flex: 0 0 40%;
+    }
+
+    &__controls {
+      position: static;
+      transform: none;
+      margin-top: $space-2;
+      display: flex;
+      justify-content: space-between;
+      padding-inline: $space-4;
     }
   }
 }
@@ -473,7 +512,7 @@
       max-height: 160px;
       width: 100%;
       object-fit: cover;
-      position: static; // 🔥 FIX
+      position: static;
     }
 
     .container {
