@@ -11,22 +11,22 @@ export default function initAbout() {
 
   window.addEventListener('scroll', () => {
     const vh = window.innerHeight;
-    if (aboutSection) {
-      const imageTop = aboutImage.getBoundingClientRect().top;
-      const sectionTop = aboutSection.getBoundingClientRect().top;
 
-      //Image trigger
-      if (sectionTop < vh * 0.7) {
-        aboutImage.classList.add('about__image--visible');
-      } else {
-        aboutImage.classList.remove('about__image--visible');
-      }
-      //Text trigger
-      if (imageTop < vh * 0.1) {
-        aboutText.classList.add('about__content--visible');
-      } else {
-        aboutText.classList.remove('about__content--visible');
-      }
+    const imageTop = aboutImage.getBoundingClientRect().top;
+    const textTop = aboutText.getBoundingClientRect().top;
+
+    // Image trigger
+    if (imageTop < vh * 0.75) {
+      aboutImage.classList.add('about__image--visible');
+    } else {
+      aboutImage.classList.remove('about__image--visible');
+    }
+
+    // Text trigger
+    if (textTop < vh * 0.7) {
+      aboutText.classList.add('about__content--visible');
+    } else {
+      aboutText.classList.remove('about__content--visible');
     }
   });
 }
