@@ -1,0 +1,506 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.at-home-baby-page {
+  padding-block: $space-6;
+
+  &__content {
+    @include flex-column-center;
+    @include fade-in-up;
+    transition-delay: 0.1s;
+    text-align: center;
+
+    &--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__title {
+    font-size: $fs-lgx;
+    color: $color-dark;
+    font-family: $font-heading;
+    margin-bottom: $space-3;
+  }
+
+  &__subtitle {
+    font-size: $fs-xs;
+    color: $color-dark;
+    letter-spacing: 1px;
+    font-family: $font-text;
+    font-weight: lighter;
+    margin-bottom: $space-3;
+  }
+
+  &__description {
+    font-family: $font-text;
+    font-size: $fs-sm;
+    color: $color-grey;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: $space-4;
+  }
+
+  &__text {
+    color: $color-muted;
+    font-family: $font-text;
+    font-size: $fs-sm;
+    margin-bottom: $space-4;
+    line-height: 1.6;
+
+    &--italic {
+      font-style: italic;
+    }
+  }
+
+  &__showcase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-3;
+    @include fade-in-up;
+    transition-delay: 0.3s;
+
+    &--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  @include tablet {
+    &__content {
+      max-width: 700px;
+      margin-inline: auto;
+    }
+
+    &__description {
+      font-size: $fs-base;
+    }
+
+    &__showcase {
+      gap: $space-4;
+    }
+  }
+
+  @include desktop {
+    padding-block: $space-7;
+
+    &__content {
+      max-width: 800px;
+    }
+
+    &__title {
+      font-size: $fs-xl;
+    }
+
+    &__description {
+      font-size: $fs-base;
+      line-height: 1.7;
+    }
+
+    &__showcase {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-5;
+      align-items: center;
+    }
+  }
+}
+
+.at-home-baby-parallax {
+  position: relative;
+  background-image: url('../../images/pexels-lucas-w-575583756-16963954-SMALL.jpg');
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+
+  @include flex-column-center;
+  text-align: center;
+  padding: $space-5 $space-4;
+
+  &__testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: $space-4;
+    margin: 0;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  &__quote {
+    text-transform: uppercase;
+    color: $color-light;
+    font-size: $fs-base;
+    font-family: $font-heading;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 0 auto;
+    line-height: 1.7;
+    max-width: 320px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+
+    p {
+      margin-bottom: $space-2;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__author {
+    color: $color-light;
+    font-family: $font-text;
+    font-style: italic;
+  }
+
+  @include tablet {
+    min-height: 350px;
+    padding-block: $space-6;
+
+    &__image {
+      max-width: 220px;
+    }
+  }
+
+  @include desktop {
+    min-height: 450px;
+    background-attachment: fixed;
+
+    &__testimonial {
+      max-width: 700px;
+    }
+
+    &__image {
+      max-width: 240px;
+    }
+
+    &__quote {
+      max-width: 500px;
+      font-size: $fs-lg;
+    }
+  }
+}
+
+.at-home-baby-slideshow {
+  padding: $space-5 0;
+  overflow: hidden;
+  position: relative;
+
+  &__wrapper {
+    width: 100%;
+    padding-inline: $space-4;
+  }
+
+  &__carousel {
+    display: flex;
+    gap: $space-2;
+    margin-inline: calc(-1 * $space-4);
+    padding-inline: $space-4;
+    overflow-x: visible;
+    will-change: transform;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &__image {
+    flex: 0 0 65%;
+    flex-shrink: 0;
+    aspect-ratio: 4/5;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: $space-2;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  &__btn {
+    pointer-events: auto;
+    padding: $space-2;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    border: none;
+    cursor: pointer;
+    font-size: $fs-sm;
+    color: $color-dark;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  @include tablet {
+    &__wrapper {
+      padding-inline: $space-5;
+    }
+    &__carousel {
+      margin-inline: calc(-1 * $space-5);
+      padding-inline: $space-5;
+    }
+    &__image {
+      flex: 0 0 48%;
+    }
+  }
+
+  @include desktop {
+    padding-block: $space-6;
+
+    &__wrapper {
+      padding-inline: $space-6;
+    }
+    &__carousel {
+      margin-inline: calc(-1 * $space-6);
+      padding-inline: $space-6;
+    }
+    &__image {
+      flex: 0 0 32%;
+    }
+
+    &__controls {
+      position: static;
+      transform: none;
+      margin-top: $space-4;
+      margin-inline: auto;
+      max-width: 1200px;
+      padding-inline: $space-6;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+
+    &__btn {
+      pointer-events: auto;
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: $color-muted;
+      padding: $space-2 $space-5;
+      font-size: $fs-base;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.03);
+        border-color: $color-grey;
+        color: $color-dark;
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+.at-home-baby-questions {
+  padding-block: $space-6;
+  background-color: $color-light;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+  }
+
+  &__image {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__container {
+    width: 100%;
+  }
+
+  &__heading {
+    font-family: $font-heading;
+    font-size: $fs-lgx;
+    color: $color-dark;
+    margin-bottom: $space-4;
+    text-align: left;
+  }
+
+  &__question {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-block: $space-2;
+    transition: background-color 0.3s ease;
+
+    &--active {
+      .at-home-baby-questions__icon {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__heading-item {
+    margin: 0;
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: $space-3 0;
+    cursor: pointer;
+    text-align: left;
+    gap: $space-3;
+  }
+
+  &__title {
+    font-family: $font-text;
+    font-size: $fs-base;
+    color: $color-dark;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  &__icon {
+    font-size: $fs-lg;
+    color: $color-muted;
+    transition: transform 0.3s ease;
+    user-select: none;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  &__answer {
+    font-family: $font-text;
+    font-size: $fs-sm;
+    color: $color-grey;
+    line-height: 1.6;
+    padding-bottom: $space-3;
+    margin: 0;
+  }
+
+  @include tablet {
+    padding-block: $space-7;
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+      gap: $space-5;
+    }
+  }
+
+  @include desktop {
+    .container {
+      gap: $space-6;
+    }
+
+    &__heading {
+      font-size: $fs-xl;
+    }
+
+    &__title {
+      font-size: calc(#{$fs-base} + 2px);
+    }
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .at-home-baby-page {
+    padding-block: $space-4;
+
+    &__content {
+      transform: translateY(25px);
+
+      &--visible {
+        transform: translateY(0);
+      }
+    }
+
+    &__description {
+      margin-bottom: $space-4;
+      font-size: $fs-sm;
+    }
+
+    &__showcase {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-3;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: $fs-lg;
+    }
+  }
+
+  .at-home-baby-parallax {
+    min-height: 220px;
+    padding-block: $space-3;
+
+    &__image {
+      max-width: 150px;
+    }
+
+    &__quote {
+      font-size: $fs-sm;
+      max-width: 600px;
+    }
+  }
+
+  .at-home-baby-slideshow {
+    padding: $space-2 0;
+
+    &__carousel {
+      margin-inline: calc(-1 * $space-4);
+      padding-inline: $space-4;
+    }
+
+    &__image {
+      flex: 0 0 40%;
+    }
+
+    &__controls {
+      position: static;
+      transform: none;
+      margin-top: $space-2;
+      display: flex;
+      justify-content: space-between;
+      padding-inline: $space-4;
+    }
+  }
+}

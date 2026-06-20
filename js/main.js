@@ -7,6 +7,7 @@ import initMemories from './memories.js';
 import initScroll from './scroll.js';
 import initShowcase from './revealAnimations.js';
 import initStudioBaby from './studio-baby.js';
+import initAtHomeBaby from './at-home-baby.js';
 
 initHeader();
 initAbout();
@@ -17,3 +18,4 @@ initMemories();
 initScroll();
 initShowcase();
 initStudioBaby();
+initAtHomeBaby();
