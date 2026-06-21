@@ -67,7 +67,7 @@ export default function initStudioBaby() {
 
     carousel.style.transition = 'none';
     carousel.style.transform = `translateX(${-moveDistance - paddingOffset}px)`;
-    carousel.offsetHeight; // Reflow
+    carousel.offsetHeight;
 
     carousel.style.transition = 'transform 0.4s ease-in-out';
     carousel.style.transform = `translateX(${-paddingOffset}px)`;

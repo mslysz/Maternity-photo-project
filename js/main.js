@@ -8,6 +8,7 @@ import initScroll from './scroll.js';
 import initShowcase from './revealAnimations.js';
 import initStudioBaby from './studio-baby.js';
 import initAtHomeBaby from './at-home-baby.js';
+import initFamilyPage from './family-photography.js';
 
 initHeader();
 initAbout();
@@ -19,3 +20,4 @@ initScroll();
 initShowcase();
 initStudioBaby();
 initAtHomeBaby();
+initFamilyPage();

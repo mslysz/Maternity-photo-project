@@ -1,4 +1,4 @@
-export default function initMaternity() {
+export default function initFamilyPage() {
   const el = (selector) => document.querySelector(selector);
   const allEl = (selector) => [...document.querySelectorAll(selector)];
 
@@ -6,21 +6,27 @@ export default function initMaternity() {
     (entries) => {
       entries.forEach((entry) => {
         const baseClass = entry.target.className.split(' ')[0];
-        if (entry.isIntersecting)
+        if (entry.isIntersecting) {
           entry.target.classList.add(`${baseClass}--visible`);
-        else entry.target.classList.remove(`${baseClass}--visible`);
+        } else {
+          entry.target.classList.remove(`${baseClass}--visible`);
+        }
       });
     },
     { threshold: 0.1 },
   );
 
   allEl(
-    '.maternity__header, .maternity__card, .maternity-page__content, .maternity-page__showcase',
+    '.family-page__content, ' +
+      '.family-page__showcase, ' +
+      '.family-page-story__images, ' +
+      '.family-page-story__content',
   ).forEach((element) => observer.observe(element));
 
-  const carousel = el('.maternity-slideshow__carousel');
-  const btnPrev = el('.maternity-slideshow__btn--prev');
-  const btnNext = el('.maternity-slideshow__btn--next');
+  // CAROUSEL SLIDESHOW
+  const carousel = el('.family-page-slideshow__carousel');
+  const btnPrev = el('.family-page-slideshow__btn--prev');
+  const btnNext = el('.family-page-slideshow__btn--next');
 
   if (!carousel || !btnPrev || !btnNext) return;
 
@@ -101,47 +107,4 @@ export default function initMaternity() {
 
   carousel.style.transform = `translateX(${-getPaddingOffset()}px)`;
   startAutoPlay();
-
-  // ACCORDION FAQ
-
-  const faqContainer = el('.maternity-questions');
-
-  if (faqContainer) {
-    faqContainer.addEventListener('click', (e) => {
-      const button = e.target.closest('.maternity-questions__header');
-      if (!button) return;
-
-      const parent = button.closest('.maternity-questions__question');
-      const content = parent.querySelector('.maternity-questions__content');
-      const isExpanded = button.getAttribute('aria-expanded') === 'true';
-
-      allEl('.maternity-questions__question').forEach((item) => {
-        if (item !== parent) {
-          item.classList.remove('maternity-questions__question--active');
-
-          const header = item.querySelector('.maternity-questions__header');
-          if (header) header.setAttribute('aria-expanded', 'false');
-
-          const itemContent = item.querySelector(
-            '.maternity-questions__content',
-          );
-          if (itemContent) {
-            itemContent.style.maxHeight = '0px';
-          }
-        }
-      });
-
-      if (isExpanded) {
-        parent.classList.remove('maternity-questions__question--active');
-        button.setAttribute('aria-expanded', 'false');
-
-        content.style.maxHeight = '0px';
-      } else {
-        parent.classList.add('maternity-questions__question--active');
-        button.setAttribute('aria-expanded', 'true');
-
-        content.style.maxHeight = content.scrollHeight + 'px';
-      }
-    });
-  }
 }

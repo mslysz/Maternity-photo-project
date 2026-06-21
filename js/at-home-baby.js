@@ -2,7 +2,6 @@ export default function initAtHomeBaby() {
   const el = (selector) => document.querySelector(selector);
   const allEl = (selector) => [...document.querySelectorAll(selector)];
 
-  // INTERSECTION OBSERVER (ANIMATIONS)
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -17,7 +16,6 @@ export default function initAtHomeBaby() {
     { threshold: 0.1 },
   );
 
-  // Observed elements matched with at-home-baby.html structure
   allEl('.at-home-baby-page__content, .at-home-baby-page__showcase').forEach(
     (element) => observer.observe(element),
   );
@@ -72,7 +70,7 @@ export default function initAtHomeBaby() {
 
     carousel.style.transition = 'none';
     carousel.style.transform = `translateX(${-moveDistance - paddingOffset}px)`;
-    carousel.offsetHeight; // Reflow
+    carousel.offsetHeight;
 
     carousel.style.transition = 'transform 0.4s ease-in-out';
     carousel.style.transform = `translateX(${-paddingOffset}px)`;
