@@ -4875,6 +4875,137 @@ img {
   }
 }
 
+.navigation-tiles {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #f9f7f4;
+}
+.navigation-tiles__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .navigation-tiles__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+}
+.navigation-tiles__tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  will-change: opacity, transform;
+  -webkit-transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@media (min-width: 768px) {
+  .navigation-tiles__tile:nth-child(2) {
+    -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+  }
+  .navigation-tiles__tile:nth-child(3) {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+}
+.navigation-tiles__tile--visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.navigation-tiles__tile:hover .navigation-tiles__img, .navigation-tiles__tile:focus .navigation-tiles__img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.navigation-tiles__tile:hover .navigation-tiles__overlay, .navigation-tiles__tile:focus .navigation-tiles__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navigation-tiles__tile:hover .navigation-tiles__label, .navigation-tiles__tile:focus .navigation-tiles__label {
+  letter-spacing: 0.25em;
+}
+.navigation-tiles__image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .navigation-tiles__image-container {
+    aspect-ratio: 3/4;
+  }
+}
+@media (min-width: 1024px) {
+  .navigation-tiles__image-container {
+    aspect-ratio: 10/11;
+  }
+}
+.navigation-tiles__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), -webkit-transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.navigation-tiles__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+  z-index: 1;
+}
+.navigation-tiles__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #f9f7f4;
+  font-family: "Cormorant Garamond", serif;
+  font-size: calc(1rem + 2px);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition: letter-spacing 0.4s ease;
+  transition: letter-spacing 0.4s ease;
+}
+@media (min-width: 768px) {
+  .navigation-tiles__label {
+    font-size: calc(1rem + 1px);
+  }
+}
+@media (min-width: 1024px) {
+  .navigation-tiles__label {
+    font-size: calc(1.25rem + 2px);
+  }
+}
+
 @media (orientation: landscape) and (max-height: 500px) {
   .presentation__grid {
     grid-template-columns: 1fr 1fr;
@@ -5030,5 +5161,22 @@ img {
   .know-me__answer {
     font-size: calc(0.875rem - 1px);
     padding-bottom: 0.5rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .navigation-tiles__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .navigation-tiles__image-container {
+    aspect-ratio: 16/10;
+  }
+  .navigation-tiles__label {
+    font-size: 0.75rem;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }/*# sourceMappingURL=main.css.map */

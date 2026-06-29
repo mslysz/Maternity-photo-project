@@ -20,7 +20,7 @@ export default function initKnowMe() {
   );
 
   allEl(
-    '.presentation__text-wrapper, .presentation__img--first, .presentation__img--second',
+    '.presentation__text-wrapper, .presentation__img--first, .presentation__img--second, .navigation-tiles__tile',
   ).forEach((element) => observer.observe(element));
 
   const faqContainer = document.querySelector('.know-me');
