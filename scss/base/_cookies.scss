@@ -1,0 +1,73 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba($color-light, 0.98);
+  color: $color-dark;
+  padding-block: $space-4;
+  z-index: 9999;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.04);
+  border-top: 1px solid rgba($color-dark, 0.05);
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+  transform: translateY(0);
+  opacity: 1;
+
+  &--hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    align-items: center;
+    text-align: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      gap: $space-5;
+    }
+  }
+
+  &__text {
+    font-family: $font-text;
+    font-size: calc(#{$fs-sm} - 1px);
+    line-height: 1.6;
+    margin: 0;
+    color: $color-muted;
+  }
+
+  &__btn {
+    padding: calc(#{$space-2} - 2px) $space-5;
+    font-family: $font-heading;
+    font-size: $fs-xs;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border: 1px solid rgba($color-dark, 0.3);
+    background-color: transparent;
+    color: $color-dark;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: $color-dark;
+      color: $color-light;
+      border-color: $color-dark;
+    }
+  }
+}
