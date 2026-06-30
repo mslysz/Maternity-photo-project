@@ -149,6 +149,9 @@ img {
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
   color: #1a1a1a;
 }
+.header--light {
+  color: #1a1a1a;
+}
 .header__logo {
   height: 20px;
   width: auto;
