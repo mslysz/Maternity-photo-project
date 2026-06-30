@@ -3,6 +3,7 @@
 @use 'base/globals';
 @use 'base/components';
 @use 'base/mixins';
+@use 'base/cookies';
 
 @use 'layout/container';
 @use 'layout/header';
@@ -25,3 +26,4 @@
 @use 'pages/athome-baby-page';
 @use 'pages/family-photography-page';
 @use 'pages/know-me';
+@use 'pages/contact-page';

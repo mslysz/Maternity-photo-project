@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patrice | Newborn & Maternity Photographer</title>
+    <meta
+      name="description"
+      content="Professional newborn, baby, and maternity photography by Patrice. Soulful and natural photo sessions in studio or at your home."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Material+Symbols+Outlined&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header header--light">
+      <img
+        class="header__logo"
+        src="images/logo.png"
+        alt="Patrice Photography logo"
+      />
+      <button
+        class="header__burger-btn"
+        aria-label="Open menu"
+        aria-controls="main-nav"
+        aria-expanded="false"
+      >
+        <span
+          class="header__burger material-symbols-outlined"
+          aria-hidden="true"
+        >
+          menu
+        </span>
+        <span class="header__burger-text" aria-hidden="true">MENU</span>
+      </button>
+    </header>
+    <div class="nav-overlay" id="js-nav-overlay" aria-hidden="true"></div>
+    <nav class="nav" id="main-nav">
+      <button
+        class="nav__close-btn"
+        aria-label="Close menu"
+        aria-controls="main-nav"
+      >
+        <span class="material-symbols-outlined"> close </span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="maternity.html">maternity</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="studio-baby.html">studio baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="at-home-baby.html">at-home baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="family-photography.html"
+            >natural family photography</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">meet patrice</a>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--no-underline" href="#">blog</a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section class="contact">
+        <div class="container">
+          <div class="contact__grid">
+            <div class="contact__gallery contact__gallery--first">
+              <figure class="contact__figure contact__figure--animate-down">
+                <img
+                  src="/images/pexels-rogeriosouzafotografia-SMALL-contact.jpg"
+                  alt="Pregnant woman glowing in natural light"
+                />
+              </figure>
+              <figure class="contact__figure contact__figure--animate-up">
+                <img
+                  src="/images/pexels-baby-minhchou-SMALL-contact.jpg"
+                  alt="Newborn baby wrapped in soft blankie"
+                />
+              </figure>
+            </div>
+
+            <div class="contact__content">
+              <header class="contact__header">
+                <h2 class="contact__title">
+                  I look forward to hearing from you
+                </h2>
+                <p class="contact__subtitle">
+                  Please get in touch with me to discuss the details of a
+                  newborn or maternity photo shoot.
+                </p>
+              </header>
+              <div class="contact__text">
+                <p>
+                  Choosing your maternity and newborn photographer is such an
+                  important decision. You'll be sharing some of the most
+                  fragile, precious moments of your life with them, trusting
+                  them to capture your memories exactly as you want to remember
+                  them. You need to find someone who makes you feel safe to be
+                  vulnerable, and whose art truly makes your heart sing.
+                </p>
+                <p>
+                  If you feel that person might be me, I would love to hear from
+                  you. To ensure the highest level of care and dedication for
+                  every story I tell, I only accept a limited number of bookings
+                  each month, and my calendar fills up quickly. If you love my
+                  vision and want me to capture your maternity or newborn
+                  journey, please fill out the contact form below or reach out
+                  directly at:
+                  <a
+                    href="mailto:patricenebraska@gmail.com"
+                    class="contact__email"
+                    >patricenebraska@gmail.com</a
+                  >.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact__gallery contact__gallery--second">
+              <figure class="contact__figure contact__figure--animate-down">
+                <img
+                  src="/images/jonathan-borba-xlY3ayphpIc-SMALL-contact2v.jpg"
+                  alt="Close-up of tiny newborn feet"
+                />
+              </figure>
+              <figure class="contact__figure contact__figure--animate-up">
+                <img
+                  src="/images/hollie-santos-fNwC6hnV4Po-SMALL-contact2v.jpg"
+                  alt="Happy parents holding their newborn"
+                />
+              </figure>
+            </div>
+          </div>
+
+          <form action="#" class="contact__form form">
+            <div class="form__group">
+              <label for="first-name" class="form__label">First Name</label>
+              <input
+                id="first-name"
+                name="first-name"
+                autocomplete="given-name"
+                type="text"
+                class="form__input"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="last-name" class="form__label">Last Name</label>
+              <input
+                id="last-name"
+                name="last-name"
+                autocomplete="family-name"
+                type="text"
+                class="form__input"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="email" class="form__label">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                autocomplete="email"
+                type="email"
+                class="form__input"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="phone" class="form__label">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+                type="tel"
+                class="form__input"
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="session-type" class="form__label">Shoot type</label>
+              <select
+                id="session-type"
+                name="session-type"
+                class="form__select"
+              >
+                <option value="family-home">Family at-home</option>
+                <option value="maternity">Maternity</option>
+                <option value="baby-studio">Baby studio</option>
+                <option value="family-studio">Family studio</option>
+                <option value="birthday">1st Birthday</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="due-date" class="form__label"
+                >Due date / Preferred date</label
+              >
+              <input
+                id="due-date"
+                name="due-date"
+                type="date"
+                class="form__input"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="postcode" class="form__label">Postcode</label>
+              <input
+                id="postcode"
+                name="postcode"
+                autocomplete="postal-code"
+                type="text"
+                class="form__input"
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="source" class="form__label"
+                >How did you hear about me?</label
+              >
+              <select id="source" name="source" class="form__select" required>
+                <option value="" disabled selected hidden>
+                  Select an option...
+                </option>
+                <option value="instagram">Instagram</option>
+                <option value="facebook">Facebook</option>
+                <option value="google">Google Search</option>
+                <option value="recommendation">Friends or Family</option>
+                <option value="other">Other source</option>
+              </select>
+            </div>
+
+            <div class="form__group form__group--full">
+              <label for="information" class="form__label"
+                >Any other info...</label
+              >
+              <textarea
+                id="information"
+                name="information"
+                rows="4"
+                class="form__textarea"
+                placeholder="Tell me more about your vision..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="form__btn">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__meta">
+            <div class="footer__heading">
+              <h2 class="footer__title">LET'S CONNECT</h2>
+              <p class="footer__subtitle">Check out my social media</p>
+            </div>
+
+            <nav class="footer__socials" aria-label="Social media">
+              <a
+                href="https://instagram.com/"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener"
+              >
+                <span
+                  class="material-symbols-outlined footer__social-icon"
+                  aria-hidden="true"
+                  >photo_camera</span
+                >
+                <span class="sr-only">Instagram</span>
+              </a>
+              <a
+                href="https://facebook.com/"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener"
+              >
+                <span
+                  class="material-symbols-outlined footer__social-icon"
+                  aria-hidden="true"
+                  >thumb_up</span
+                >
+                <span class="sr-only">Facebook</span>
+              </a>
+            </nav>
+          </div>
+
+          <div class="footer__branding">
+            <div class="footer__logo-wrapper">
+              <a href="index.html" class="footer__logo-link">
+                <img
+                  class="footer__logo"
+                  src="images/logo.png"
+                  alt="Patrice Photography Logo"
+                />
+              </a>
+            </div>
+
+            <address class="footer__contact">
+              <p class="footer__address">Grand Island, Nebraska</p>
+              <a
+                href="mailto:patrice@photography.com"
+                class="footer__email-link"
+                >patrice@photography.com</a
+              >
+            </address>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <small>&copy; 2026 Patrice Photography. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+    <button id="scrollToTopBtn" class="scroll-arrow" aria-label="Scroll top">
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >keyboard_arrow_up</span
+      >
+    </button>
+    <script type="module" src="js/main.js"></script>
+    <div id="cookie-banner" class="cookie-banner cookie-banner--hidden" inert>
+      <div class="container cookie-banner__container">
+        <p class="cookie-banner__text">
+          This website uses cookies to ensure you get the best experience. By
+          continuing to browse the site, you agree to our use of cookies.
+        </p>
+        <div class="cookie-banner__actions">
+          <button
+            id="cookie-accept"
+            class="cookie-banner__btn cookie-banner__btn--accept"
+          >
+            Accept
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
