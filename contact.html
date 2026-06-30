@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patrice | Newborn & Maternity Photographer</title>
+    <meta
+      name="description"
+      content="Professional newborn, baby, and maternity photography by Patrice. Soulful and natural photo sessions in studio or at your home."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Material+Symbols+Outlined&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header header--light">
+      <img
+        class="header__logo"
+        src="images/logo.png"
+        alt="Patrice Photography logo"
+      />
+      <button
+        class="header__burger-btn"
+        aria-label="Open menu"
+        aria-controls="main-nav"
+        aria-expanded="false"
+      >
+        <span
+          class="header__burger material-symbols-outlined"
+          aria-hidden="true"
+        >
+          menu
+        </span>
+        <span class="header__burger-text" aria-hidden="true">MENU</span>
+      </button>
+    </header>
+
+    <div class="nav-overlay" id="js-nav-overlay" aria-hidden="true"></div>
+
+    <nav class="nav" id="main-nav">
+      <button
+        class="nav__close-btn"
+        aria-label="Close menu"
+        aria-controls="main-nav"
+      >
+        <span class="material-symbols-outlined"> close </span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="maternity.html">maternity</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="studio-baby.html">studio baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="at-home-baby.html">at-home baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="family-photography.html"
+            >natural family photography</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">meet patrice</a>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--no-underline" href="#">blog</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main></main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__meta">
+            <div class="footer__heading">
+              <h2 class="footer__title">LET'S CONNECT</h2>
+              <p class="footer__subtitle">Check out my social media</p>
+            </div>
+
+            <nav class="footer__socials" aria-label="Social media">
+              <a
+                href="https://instagram.com/"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener"
+              >
+                <span
+                  class="material-symbols-outlined footer__social-icon"
+                  aria-hidden="true"
+                  >photo_camera</span
+                >
+                <span class="sr-only">Instagram</span>
+              </a>
+              <a
+                href="https://facebook.com/"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener"
+              >
+                <span
+                  class="material-symbols-outlined footer__social-icon"
+                  aria-hidden="true"
+                  >thumb_up</span
+                >
+                <span class="sr-only">Facebook</span>
+              </a>
+            </nav>
+          </div>
+
+          <div class="footer__branding">
+            <div class="footer__logo-wrapper">
+              <a href="index.html" class="footer__logo-link">
+                <img
+                  class="footer__logo"
+                  src="images/logo.png"
+                  alt="Patrice Photography Logo"
+                />
+              </a>
+            </div>
+
+            <address class="footer__contact">
+              <p class="footer__address">Grand Island, Nebraska</p>
+              <a
+                href="mailto:patrice@photography.com"
+                class="footer__email-link"
+                >patrice@photography.com</a
+              >
+            </address>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <small>&copy; 2026 Patrice Photography. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="scroll-arrow" aria-label="Scroll top">
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >keyboard_arrow_up</span
+      >
+    </button>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

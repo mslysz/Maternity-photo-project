@@ -10,6 +10,7 @@ import initStudioBaby from './studio-baby.js';
 import initAtHomeBaby from './at-home-baby.js';
 import initFamilyPage from './family-photography.js';
 import initKnowMe from './know-me.js';
+import initContactPage from './contact.js';
 
 initHeader();
 initAbout();
@@ -23,3 +24,4 @@ initStudioBaby();
 initAtHomeBaby();
 initFamilyPage();
 initKnowMe();
+initContactPage();
