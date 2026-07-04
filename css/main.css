@@ -5674,4 +5674,312 @@ img {
     margin-top: 0.5rem;
     padding: 0.5rem 2rem;
   }
+}
+
+.blog-page {
+  padding-block: 5rem;
+  background-color: #f9f7f4;
+}
+
+.blog-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0;
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
+  will-change: opacity, transform;
+  -webkit-transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, -webkit-transform 0.6s ease-out;
+}
+.blog-hero--visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.blog-hero__title {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.blog-hero__subtitle {
+  font-size: 0.75rem;
+  color: #4d4d4d;
+  font-family: "Inter", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.blog-posts__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.post-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: transparent;
+  opacity: 0;
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
+  will-change: opacity, transform;
+  -webkit-transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, -webkit-transform 0.6s ease-out;
+}
+.post-card--visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.post-card__image-wrapper {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: #f3efeb;
+}
+.post-card__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), -webkit-transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.post-card__image:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+.post-card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-inline: 0.25rem;
+  width: 100%;
+}
+.post-card__category {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  color: #c8a27a;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+.post-card__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.post-card__excerpt {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  color: #4d4d4d;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.post-card__full-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
+  transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
+  width: 100%;
+}
+.post-card__inner-text {
+  padding-top: 0.25rem;
+  padding-bottom: 1.5rem;
+}
+.post-card__read-more {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.post-card__read-more span.material-symbols-outlined {
+  font-size: 1rem;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.post-card__read-more:hover {
+  color: #c8a27a;
+}
+.post-card--expanded .post-card__full-content {
+  opacity: 1;
+}
+.post-card--expanded .post-card__read-more {
+  color: #777;
+}
+.post-card--expanded .post-card__read-more span.material-symbols-outlined {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.blog-list {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  color: #4d4d4d;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+.blog-list li {
+  margin-bottom: 1.5rem;
+}
+.blog-list li:last-child {
+  margin-bottom: 0;
+}
+.blog-list strong {
+  color: #1a1a1a;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 768px) {
+  .blog-posts__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .post-card__title {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .blog-page {
+    padding-block: 5rem;
+  }
+  .blog-hero {
+    margin-bottom: 3rem;
+  }
+  .blog-hero__title {
+    font-size: 2.5rem;
+  }
+  .blog-hero__subtitle {
+    font-size: 0.875rem;
+  }
+  .blog-posts__grid {
+    gap: 2rem;
+  }
+  .post-card__title {
+    font-size: 1.75rem;
+  }
+  .post-card__excerpt {
+    font-size: 1rem;
+  }
+  .blog-list {
+    font-size: 1rem;
+  }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .blog-page {
+    padding-block: 1.5rem;
+  }
+  .post-card {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1.5rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .post-card__image-wrapper {
+    width: 100%;
+    margin-bottom: 0;
+    aspect-ratio: 4/5;
+  }
+  .post-card__content {
+    width: 100%;
+    padding-inline: 0;
+  }
+  .post-card__title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  .post-card__excerpt {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  .post-card__full-content {
+    width: 100%;
+  }
+  .post-card__inner-text {
+    padding-top: 0.25rem;
+    padding-bottom: 0.5rem;
+  }
+  .post-card .blog-list {
+    font-size: 0.75rem;
+    padding-left: 1rem;
+  }
+  .post-card .blog-list li {
+    margin-bottom: 0.5rem;
+  }
+  .post-card .blog-list strong {
+    font-size: 0.875rem;
+    display: inline;
+    margin-right: 0.25rem;
+  }
 }/*# sourceMappingURL=main.css.map */
