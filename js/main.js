@@ -12,6 +12,7 @@ import initFamilyPage from './family-photography.js';
 import initKnowMe from './know-me.js';
 import initContactPage from './contact.js';
 import initCookieBanner from './cookies.js';
+import initBlog from './blog.js';
 
 initHeader();
 initAbout();
@@ -27,3 +28,4 @@ initFamilyPage();
 initKnowMe();
 initContactPage();
 initCookieBanner();
+initBlog();
