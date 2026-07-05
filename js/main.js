@@ -13,6 +13,7 @@ import initKnowMe from './know-me.js';
 import initContactPage from './contact.js';
 import initCookieBanner from './cookies.js';
 import initBlog from './blog.js';
+import initExperience from './experience.js';
 
 initHeader();
 initAbout();
@@ -29,3 +30,4 @@ initKnowMe();
 initContactPage();
 initCookieBanner();
 initBlog();
+initExperience();
