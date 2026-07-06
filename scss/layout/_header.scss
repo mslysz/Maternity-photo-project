@@ -80,6 +80,9 @@
   }
 
   @include desktop {
+    & {
+      padding: $space-3 $space-4;
+    }
     &__logo {
       height: 54px;
     }

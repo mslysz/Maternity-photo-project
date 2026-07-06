@@ -279,6 +279,9 @@ img {
   }
 }
 @media (min-width: 1024px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
   .header__logo {
     height: 54px;
   }
