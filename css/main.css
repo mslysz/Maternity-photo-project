@@ -83,7 +83,7 @@ img {
           justify-content: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   color: #1a1a1a;
   text-decoration: none;
   text-transform: uppercase;
@@ -164,7 +164,7 @@ img {
   }
 }
 .cookie-banner__text {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: calc(0.875rem - 1px);
   line-height: 1.6;
   margin: 0;
@@ -567,7 +567,7 @@ img {
   padding-bottom: 1rem;
 }
 .footer__subtitle {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   font-style: italic;
@@ -645,7 +645,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   font-style: normal;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 1rem;
   gap: 0.5rem;
   padding-bottom: 2rem;
@@ -668,7 +668,7 @@ img {
   padding-bottom: 0.5rem;
 }
 .footer__copyright small {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.75rem;
   color: rgb(69.3, 69.3, 69.3);
   letter-spacing: 1px;
@@ -923,7 +923,7 @@ img {
 }
 .about__text {
   color: #777;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -1097,7 +1097,7 @@ img {
   letter-spacing: 1px;
 }
 .parallax__subtitle {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   font-style: normal;
   text-transform: uppercase;
@@ -1169,7 +1169,7 @@ img {
   font-size: 0.75rem;
   color: #777;
   letter-spacing: 1px;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-weight: lighter;
   margin-bottom: 1rem;
 }
@@ -1180,7 +1180,7 @@ img {
   margin-bottom: 1rem;
 }
 .maternity__description {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   line-height: 1.6;
@@ -1250,7 +1250,7 @@ img {
 }
 .maternity__card-text {
   margin-bottom: 2rem;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   line-height: 1.6;
@@ -1414,7 +1414,7 @@ img {
 }
 .testimonials__author {
   color: #f9f7f4;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
 }
 .testimonials__controls {
   display: -webkit-box;
@@ -1552,7 +1552,7 @@ img {
   font-size: 0.75rem;
   color: #1a1a1a;
   letter-spacing: 1px;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-weight: 400;
   margin-bottom: 1rem;
   text-align: center;
@@ -1574,7 +1574,7 @@ img {
   gap: 1.5rem;
 }
 .philosophy__text {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   line-height: 1.75;
@@ -1692,7 +1692,7 @@ img {
   padding-bottom: 1.5rem;
 }
 .memories__text {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   color: #777;
   text-align: center;
 }
@@ -1873,7 +1873,7 @@ img {
   font-size: 1.75rem;
 }
 .blog__subtitle {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   color: #4d4d4d;
   font-style: italic;
 }
@@ -1922,7 +1922,7 @@ img {
 }
 .blog__post-title {
   text-align: center;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   color: #4d4d4d;
   padding-bottom: 1.5rem;
   font-style: italic;
@@ -1934,7 +1934,7 @@ img {
   text-decoration: none;
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   cursor: pointer;
   color: #4d4d4d;
   margin-top: auto;
@@ -2010,7 +2010,7 @@ img {
           align-items: center;
 }
 .service-nav__subtitle {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -2279,12 +2279,12 @@ img {
   font-size: 0.75rem;
   color: #1a1a1a;
   letter-spacing: 1px;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-weight: lighter;
   margin-bottom: 1rem;
 }
 .maternity-page__description {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   line-height: 1.6;
@@ -2293,7 +2293,7 @@ img {
 }
 .maternity-page__text {
   color: #777;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -2463,7 +2463,7 @@ img {
 }
 .maternity-parallax__author {
   color: #f9f7f4;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-style: italic;
 }
 @media (min-width: 768px) {
@@ -2757,7 +2757,7 @@ img {
 }
 .maternity-questions__answer {
   padding-bottom: 1rem;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   line-height: 1.7;
   color: #4d4d4d;
@@ -2855,12 +2855,12 @@ img {
   font-size: 0.75rem;
   color: #1a1a1a;
   letter-spacing: 1px;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-weight: lighter;
   margin-bottom: 1rem;
 }
 .studio-baby-page__description {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   line-height: 1.6;
@@ -2869,7 +2869,7 @@ img {
 }
 .studio-baby-page__text {
   color: #777;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -3039,7 +3039,7 @@ img {
 }
 .studio-baby-parallax__author {
   color: #f9f7f4;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-style: italic;
 }
 @media (min-width: 768px) {
@@ -3333,7 +3333,7 @@ img {
 }
 .studio-baby-questions__answer {
   padding-bottom: 1rem;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   line-height: 1.7;
   color: #4d4d4d;
@@ -3431,12 +3431,12 @@ img {
   font-size: 0.75rem;
   color: #1a1a1a;
   letter-spacing: 1px;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-weight: lighter;
   margin-bottom: 1rem;
 }
 .at-home-baby-page__description {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   line-height: 1.6;
@@ -3445,7 +3445,7 @@ img {
 }
 .at-home-baby-page__text {
   color: #777;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -3588,7 +3588,7 @@ img {
 }
 .at-home-baby-parallax__author {
   color: #f9f7f4;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-style: italic;
 }
 @media (min-width: 768px) {
@@ -3819,7 +3819,7 @@ img {
   gap: 1rem;
 }
 .at-home-baby-questions__title {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 1rem;
   color: #1a1a1a;
   font-weight: 500;
@@ -3846,7 +3846,7 @@ img {
   transition: max-height 0.3s ease-in-out;
 }
 .at-home-baby-questions__answer {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   line-height: 1.6;
@@ -3985,12 +3985,12 @@ img {
   font-size: 0.75rem;
   color: #1a1a1a;
   letter-spacing: 1px;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-weight: lighter;
   margin-bottom: 1rem;
 }
 .family-page__description {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   line-height: 1.6;
@@ -3999,7 +3999,7 @@ img {
 }
 .family-page__text {
   color: #777;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -4125,7 +4125,7 @@ img {
 }
 .family-page-parallax__subtitle {
   color: #f9f7f4;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-style: normal;
   font-size: 0.875rem;
   letter-spacing: 1px;
@@ -4389,7 +4389,7 @@ img {
   transition: transform 0.9s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.9s ease, -webkit-transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .family-page-story__text {
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   font-size: 0.875rem;
   color: #4d4d4d;
   line-height: 1.6;
@@ -4756,7 +4756,7 @@ img {
   font-size: 0.875rem;
   line-height: 1.9;
   color: #777;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   padding-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
@@ -4973,7 +4973,7 @@ img {
   font-size: 0.875rem;
   line-height: 1.6;
   color: #4d4d4d;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
   margin: 0;
   padding-bottom: 1rem;
 }
@@ -5485,7 +5485,7 @@ img {
   font-size: 0.875rem;
   line-height: 1.9;
   color: #777;
-  font-family: "Spectral, serif";
+  font-family: "Spectral", serif;
 }
 .contact__text p {
   margin: 0 0 1.5rem 0;

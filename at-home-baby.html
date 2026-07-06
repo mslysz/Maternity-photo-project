@@ -12,17 +12,30 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Material+Symbols+Outlined&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      />
+    </noscript>
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <header class="header">
       <img
         class="header__logo"
-        src="images/logo.png"
+        src="images/logo.webp"
         alt="Patrice Photography logo"
       />
       <!--burger menu-->
@@ -364,7 +377,9 @@
             <div class="mobile-showcase__content">
               <h2 class="mobile-showcase__title">Your Experience</h2>
 
-              <a class="mobile-showcase__btn" href="#"> Discover </a>
+              <a class="mobile-showcase__btn" href="experience.html">
+                Discover
+              </a>
             </div>
           </div>
 
@@ -431,7 +446,7 @@
               <a href="index.html" class="footer__logo-link">
                 <img
                   class="footer__logo"
-                  src="images/logo.png"
+                  src="images/logo.webp"
                   alt="Patrice Photography Logo"
                 />
               </a>
