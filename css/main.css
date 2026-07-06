@@ -1040,7 +1040,7 @@ img {
 
 .parallax {
   position: relative;
-  background-image: url("../../images/olivia-anne-snyder-SMALL.jpg");
+  background-image: url("../../images/olivia-anne-snyder-SMALL.webp");
   min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1310,8 +1310,8 @@ img {
 }
 
 .testimonials {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../images/liv-bruce-M0oVPGsWk1E-SMALL.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/liv-bruce-M0oVPGsWk1E-SMALL.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../images/liv-bruce-M0oVPGsWk1E-SMALL.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../images/liv-bruce-M0oVPGsWk1E-SMALL.webp");
   min-height: auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1967,7 +1967,7 @@ img {
 
 .service-nav {
   position: relative;
-  background-image: url("../../images/arun-prakash-joVw83c01-s-SMALL.jpg");
+  background-image: url("../../images/arun-prakash-joVw83c01-s-SMALL.webp");
   min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2392,7 +2392,7 @@ img {
 
 .maternity-parallax {
   position: relative;
-  background-image: url("../../images/juan-encalada-SCteCA0Mf1A-SMALL.jpg");
+  background-image: url("../../images/juan-encalada-SCteCA0Mf1A-SMALL.webp");
   min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2968,7 +2968,7 @@ img {
 
 .studio-baby-parallax {
   position: relative;
-  background-image: url("../../images/robster_91-pregnancy-7214373_1920.jpg");
+  background-image: url("../../images/robster_91-pregnancy-7214373_1920.webp");
   min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3517,7 +3517,7 @@ img {
 
 .at-home-baby-parallax {
   position: relative;
-  background-image: url("../../images/pexels-lucas-w-575583756-16963954-SMALL.jpg");
+  background-image: url("../../images/pexels-lucas-w-575583756-16963954-SMALL.webp");
   min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4071,7 +4071,7 @@ img {
 
 .family-page-parallax {
   position: relative;
-  background-image: url("../../images/pexels-ramaketu-670244.jpg");
+  background-image: url("../../images/pexels-ramaketu-670244.webp");
   min-height: 250px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4776,7 +4776,7 @@ img {
 .opinion {
   position: relative;
   min-height: 300px;
-  background-image: url("../../images/rirri-z4KhbVhPP7s-album.jpg");
+  background-image: url("../../images/rirri-z4KhbVhPP7s-album.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -6163,10 +6163,10 @@ img {
   }
 }
 .experience-quote:not(.experience-quote--second) {
-  background-image: url("/images/pexels-prabinbasnet-SMALL-contact-paral.jpg");
+  background-image: url("/images/pexels-prabinbasnet-SMALL-contact-paral.webp");
 }
 .experience-quote--second {
-  background-image: url("/images/neelam279-infant-SMALL-paral2.jpg");
+  background-image: url("/images/neelam279-infant-SMALL-paral2.webp");
 }
 .experience-quote__overlay {
   position: absolute;
