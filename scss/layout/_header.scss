@@ -36,7 +36,7 @@
   }
 
   &__logo {
-    height: 20px;
+    height: 42px;
     width: auto;
   }
 
@@ -66,6 +66,9 @@
   }
 
   @include tablet {
+    &__logo {
+      height: 46px;
+    }
     &__burger-text {
       display: inline-block;
       font-family: $font-heading;
@@ -77,6 +80,9 @@
   }
 
   @include desktop {
+    &__logo {
+      height: 54px;
+    }
     &__burger-text {
       font-size: $fs-sm;
       letter-spacing: 2px;
