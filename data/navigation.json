@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Home",
+    "url": "index.html"
+  },
+  {
+    "title": "Maternity",
+    "url": "maternity.html"
+  },
+  {
+    "title": "Studio Baby",
+    "url": "studio-baby.html"
+  },
+  {
+    "title": "At-home Baby",
+    "url": "at-home-baby.html"
+  },
+  {
+    "title": "Natural Family Photography",
+    "url": "family-photography.html"
+  },
+  {
+    "title": "Meet Patrice",
+    "url": "know-me.html"
+  },
+  {
+    "title": "Contact",
+    "url": "contact.html"
+  },
+  {
+    "title": "Blog",
+    "url": "blog.html",
+    "class": "nav__link--no-underline"
+  }
+]

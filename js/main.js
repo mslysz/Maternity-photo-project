@@ -14,8 +14,10 @@ import initContactPage from './contact.js';
 import initCookieBanner from './cookies.js';
 import initBlog from './blog.js';
 import initExperience from './experience.js';
+import { initNavigation } from './navigation.js';
 
 initHeader();
+initNavigation();
 initAbout();
 initMaternity();
 initTestimonials();
