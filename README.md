@@ -2,6 +2,8 @@
 
 A responsive photography website presenting maternity, newborn and family photo sessions. It includes photo galleries, session packages, client testimonials, a blog page and a contact page.
 
+**[Live Demo](https://maternityphoto.netlify.app/)**
+
 This is a junior frontend portfolio project built with HTML, SCSS and vanilla JavaScript. It focuses on responsive layouts, reusable styles and interactive page elements.
 
 ## Technologies used
