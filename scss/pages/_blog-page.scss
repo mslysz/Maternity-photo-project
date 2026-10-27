@@ -11,13 +11,9 @@
   margin-bottom: $space-5;
   @include fade-in-up;
   transition-delay: 0.1s;
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
 
-  &--visible {
+  &--visible,
+  &:not(.reveal-pending) {
     opacity: 1;
     transform: translateY(0);
   }
@@ -55,13 +51,9 @@
   background: transparent;
   @include fade-in-up;
   transition-delay: 0.2s;
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
 
-  &--visible {
+  &--visible,
+  &:not(.reveal-pending) {
     opacity: 1;
     transform: translateY(0);
   }

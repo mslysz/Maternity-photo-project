@@ -1,0 +1,15 @@
+node_modules/
+playwright-report/
+test-results/
+.DS_Store
+
+# Local logs and editor/OS files
+*.log
+Thumbs.db
+Desktop.ini
+.idea/
+
+# Local environment configuration (keep examples in the repository)
+.env
+.env.*
+!.env.example

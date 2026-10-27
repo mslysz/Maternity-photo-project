@@ -1,0 +1,77 @@
+[
+  {
+    "id": "maternity",
+    "tag": "Maternity",
+    "name": "Maternity Session",
+    "price": 350,
+    "currency": "USD",
+    "description": "A soulful session celebrating your pregnancy, captured in beautiful light either outdoors or in the studio.",
+    "features": [
+      "Up to 90 minutes session",
+      "Access to client wardrobe",
+      "20 high-resolution edited digital images",
+      "Online private gallery"
+    ],
+    "featured": false,
+    "image": {
+      "src": "images/ryan-franco-8r1hxU8OfXA-SMALL-maternity.webp",
+      "alt": "Pregnant woman in elegant dress",
+      "width": 1920,
+      "height": 1280
+    },
+    "booking": {
+      "label": "Book experience",
+      "url": "contact.html"
+    }
+  },
+  {
+    "id": "studio-baby",
+    "tag": "Studio",
+    "name": "Studio Baby Session",
+    "price": 450,
+    "currency": "USD",
+    "description": "A calm, controlled environment perfect for sleepy newborns and minimalist portraits. Everything is prepared for your comfort.",
+    "features": [
+      "2-3 hours relaxed session (time for feeding)",
+      "All studio props and wraps included",
+      "25 high-resolution edited digital images",
+      "Family and sibling shots included"
+    ],
+    "featured": true,
+    "image": {
+      "src": "images/smpratt90-family-SMALL-family.webp",
+      "alt": "Newborn baby sleeping in studio",
+      "width": 1350,
+      "height": 901
+    },
+    "booking": {
+      "label": "Book experience",
+      "url": "contact.html"
+    }
+  },
+  {
+    "id": "at-home-baby",
+    "tag": "Lifestyle",
+    "name": "At-Home Baby Session",
+    "price": 490,
+    "currency": "USD",
+    "description": "Natural, lifestyle documentary photography in the comfort of your own home. Preserving the real everyday magic.",
+    "features": [
+      "Up to 2 hours relaxed session",
+      "Natural storytelling approach",
+      "30 high-resolution edited digital images",
+      "Travel within the Grand Island area"
+    ],
+    "featured": false,
+    "image": {
+      "src": "images/emmalee-couturier-U5_Ly61bl5w-SMALL-home.webp",
+      "alt": "Family holding newborn baby at home",
+      "width": 1350,
+      "height": 2026
+    },
+    "booking": {
+      "label": "Book experience",
+      "url": "contact.html"
+    }
+  }
+]

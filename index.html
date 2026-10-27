@@ -29,6 +29,10 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       />
     </noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -37,7 +41,10 @@
         class="header__logo"
         src="images/logo.webp"
         alt="Patrice Photography logo"
-      />
+        width="578"
+        height="237"
+            loading="eager"
+          />
       <!--burger menu-->
       <button
         class="header__burger-btn"
@@ -64,22 +71,60 @@
       >
         <span class="material-symbols-outlined"> close </span>
       </button>
-      <ul class="nav__list"></ul>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="maternity.html">Maternity</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="studio-baby.html">Studio Baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="at-home-baby.html">At-home Baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="family-photography.html"
+            >Natural Family Photography</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="know-me.html">Meet Patrice</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--no-underline" href="blog.html">Blog</a>
+        </li>
+      </ul>
     </nav>
     <main>
       <section class="hero">
         <div class="hero__images">
           <img
             class="hero__image hero__image--first"
-            src="/images/taisiia-stupak-9LO1MBSUZLA-SMALL.webp"
+            src="images/taisiia-stupak-9LO1MBSUZLA-SMALL.webp"
             alt="Pregnant woman posing during a professional outdoor photo session"
             fetchpriority="high"
+            width="900"
+            height="1350"
+            loading="eager"
+            decoding="async"
           />
-          <img
+          <picture class="hero__picture--second">
+            <source media="(min-width: 1024px)" srcset="images/apostolos-vamvouras-n-ZHXuW3XMU-SMALL.webp" />
+            <img
             class="hero__image hero__image--second"
-            src="/images/apostolos-vamvouras-n-ZHXuW3XMU-SMALL.webp"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1'%20height='1'%3E%3C/svg%3E"
             alt="women-with-child"
+            width="900"
+            height="1350"
+            loading="eager"
+            decoding="async"
           />
+          </picture>
         </div>
         <div class="hero__content">
           <h1 class="hero__title">MATERNITY AND NEWBORN PHOTOGRAPHER</h1>
@@ -91,10 +136,13 @@
           <div class="about__grid">
             <div class="about__image">
               <img
-                src="/images/kinga-howard-HHw9lc0ogIs-SMALL.webp"
+                src="images/kinga-howard-HHw9lc0ogIs-SMALL.webp"
                 alt="Photographer Patrice smiling"
                 loading="lazy"
-              />
+                width="986"
+                height="1350"
+            decoding="async"
+          />
             </div>
             <div class="about__content">
               <h2 class="about__title">I'M GLAD YOU'RE HERE...</h2>
@@ -158,10 +206,13 @@
             <article class="maternity__card">
               <div class="maternity__img-wrapper">
                 <img
-                  src="/images/tim-mossholder-OlJQ6hqjQa0-SMALL.webp"
+                  src="images/tim-mossholder-OlJQ6hqjQa0-SMALL.webp"
                   alt="Pregnant woman during a natural photo session"
                   loading="lazy"
-                />
+                  width="900"
+                  height="1350"
+            decoding="async"
+          />
               </div>
               <div class="maternity__card-content">
                 <p class="maternity__card-text">
@@ -169,7 +220,7 @@
                   that makes you feel confident and beautiful.The setting of
                   your dreams.
                 </p>
-                <a class="link-action" href="#">
+                <a class="link-action" href="maternity.html">
                   MATERNITY
                   <span
                     class="material-symbols-outlined link-action__icon"
@@ -183,10 +234,13 @@
             <article class="maternity__card">
               <div class="maternity__img-wrapper">
                 <img
-                  src="/images/serhat-tug-r7OkOa58-Eg-SMALL.webp"
+                  src="images/serhat-tug-r7OkOa58-Eg-SMALL.webp"
                   alt="relaxed photo shoot of newborn baby"
                   loading="lazy"
-                />
+                  width="900"
+                  height="1350"
+            decoding="async"
+          />
               </div>
               <div class="maternity__card-content">
                 <p class="maternity__card-text">
@@ -194,7 +248,7 @@
                   beautiful decor, gorgeous outfits, and I guarantee an
                   unforgettable atmosphere.
                 </p>
-                <a class="link-action" href="#">
+                <a class="link-action" href="studio-baby.html">
                   STUDIO BABY
                   <span
                     class="material-symbols-outlined maternity__link-icon"
@@ -208,10 +262,13 @@
             <article class="maternity__card">
               <div class="maternity__img-wrapper">
                 <img
-                  src="/images/dmitry-rodionov-aiHnY_8MlaY-SMALL.webp"
+                  src="images/dmitry-rodionov-aiHnY_8MlaY-SMALL.webp"
                   alt="A family posing for a photo"
                   loading="lazy"
-                />
+                  width="900"
+                  height="1350"
+            decoding="async"
+          />
               </div>
               <div class="maternity__card-content">
                 <p class="maternity__card-text">
@@ -219,7 +276,7 @@
                   shoot there, full of warmth and joy. You'll feel confident and
                   comfortable.
                 </p>
-                <a class="link-action" href="#">
+                <a class="link-action" href="at-home-baby.html">
                   AT-HOME BABY
                   <span
                     class="material-symbols-outlined maternity__link-icon"
@@ -278,7 +335,7 @@
                 bring out the subtle details of your relationship.
               </p>
               <p class="philosophy__text">
-                There is nothing more beautiful than a parent’s love and care
+                There is nothing more beautiful than a parent's love and care
                 for their little treasure. A moment captured in this way will
                 stay with you for many years to come.
               </p>
@@ -288,16 +345,24 @@
               <div class="philosophy__image">
                 <img
                   class="philosophy__img"
-                  src="/images/laura-ohlman-27oxO4k_hMU-SMALL.webp"
+                  src="images/laura-ohlman-27oxO4k_hMU-SMALL.webp"
                   alt="Mother holding her newborn baby during a natural photo session"
-                />
+                  width="900"
+                  height="1350"
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <div class="philosophy__image">
                 <img
                   class="philosophy__img"
-                  src="/images/asdrubal-luna-nmqohjGrHmQ-SMALL.webp"
+                  src="images/asdrubal-luna-nmqohjGrHmQ-SMALL.webp"
                   alt="Close-up portrait of a mother embracing her newborn child"
-                />
+                  width="900"
+                  height="1350"
+            loading="lazy"
+            decoding="async"
+          />
               </div>
             </div>
           </div>
@@ -316,33 +381,53 @@
             <div class="memories__carousel">
               <div class="memories__image">
                 <img
-                  src="/images/frelo-design-bn9LeSDAQ3A-album.webp"
+                  src="images/frelo-design-bn9LeSDAQ3A-album.webp"
                   alt="album image"
-                />
+                  width="640"
+                  height="427"
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <div class="memories__image">
                 <img
-                  src="/images/arun-prakash-lqRtNuTf2Kw-album.webp"
+                  src="images/arun-prakash-lqRtNuTf2Kw-album.webp"
                   alt="album image"
-                />
+                  width="640"
+                  height="427"
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <div class="memories__image">
                 <img
-                  src="/images/arun-prakash-tfLy9y8p91o-album.webp"
+                  src="images/arun-prakash-tfLy9y8p91o-album.webp"
                   alt="album image"
-                />
+                  width="640"
+                  height="427"
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <div class="memories__image">
                 <img
-                  src="/images/arun-prakash-ZNJEt_YXjJo-album.webp"
+                  src="images/arun-prakash-ZNJEt_YXjJo-album.webp"
                   alt="album image"
-                />
+                  width="640"
+                  height="427"
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <div class="memories__image">
                 <img
-                  src="/images/rirri-z4KhbVhPP7s-album.webp"
+                  src="images/rirri-z4KhbVhPP7s-album.webp"
                   alt="album image"
-                />
+                  width="640"
+                  height="427"
+            loading="lazy"
+            decoding="async"
+          />
               </div>
             </div>
           </div>
@@ -375,7 +460,11 @@
                   class="blog__image"
                   src="images/jonathan-borba-AMRvEzD5ux8-SMALL.webp"
                   alt="A family in a meadow during a maternity photo shoot"
-                />
+                  width="1350"
+                  height="900"
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <div class="blog__body">
                 <h3 class="blog__post-title">
@@ -390,7 +479,11 @@
                   class="blog__image"
                   src="images/camylla-battani-son4VHt4Ld0-SMALL.webp"
                   alt="A pregnant woman is holding her hands over her belly, forming a heart"
-                />
+                  width="1350"
+                  height="900"
+            loading="lazy"
+            decoding="async"
+          />
               </div>
               <div class="blog__body">
                 <h3 class="blog__post-title">
@@ -449,7 +542,11 @@
                   class="footer__logo"
                   src="images/logo.webp"
                   alt="Patrice Photography Logo"
-                />
+                  width="578"
+                  height="237"
+            loading="lazy"
+            decoding="async"
+          />
               </a>
             </div>
 
@@ -485,7 +582,7 @@
         >keyboard_arrow_up</span
       >
     </button>
-    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/main.js"></script>
     <div id="cookie-banner" class="cookie-banner cookie-banner--hidden" inert>
       <div class="container cookie-banner__container">
         <p class="cookie-banner__text">

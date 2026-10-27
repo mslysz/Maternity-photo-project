@@ -6,6 +6,7 @@
   top: 0;
   right: 0;
   height: 100dvh;
+  overflow-y: auto;
   width: 75%;
   display: flex;
   flex-direction: column;
@@ -13,6 +14,7 @@
   align-items: flex-end;
   background: $color-light;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   z-index: 100;
   transition:
@@ -85,6 +87,7 @@
 
   &--open {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: translateX(0);
   }
@@ -190,4 +193,28 @@
     pointer-events: auto;
     visibility: visible;
   }
+}
+
+// Keep navigation usable before initialization and when JavaScript is disabled.
+.nav:not(.nav--enhanced) {
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: $space-7 $space-3 $space-3;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+
+  .nav__close-btn {
+    display: none;
+  }
+
+  .nav__list {
+    margin-top: 0;
+  }
+}
+
+.header:not(.header--enhanced) .header__burger-btn {
+  display: none;
 }

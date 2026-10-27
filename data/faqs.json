@@ -1,0 +1,108 @@
+{
+  "maternity-questions": [
+    {
+      "id": "maternity-questions-1",
+      "question": "When is the best time for a newborn photo shoot?",
+      "answer": [
+        "The best time for a newborn photo shoot is between two and four weeks after the baby is born. This is when it is easiest to create beautiful newborn portraits, as babies tend to sleep through most of the session."
+      ]
+    },
+    {
+      "id": "maternity-questions-2",
+      "question": "What's the best way to dress for a photoshoot?",
+      "answer": [
+        "It's entirely up to you. You may choose an elegant dress for a more artistic look or simply wear a light, plain T-shirt for a natural, lifestyle feel. The most important thing is that you feel comfortable and confident."
+      ]
+    },
+    {
+      "id": "maternity-questions-3",
+      "question": "Can my partner join the newborn photo shoot?",
+      "answer": [
+        "Absolutely. Sessions that include your partner often create some of the most meaningful images, capturing the love you share and the excitement of welcoming your new baby."
+      ]
+    },
+    {
+      "id": "maternity-questions-4",
+      "question": "Do you also create photo albums and photo books?",
+      "answer": [
+        "Yes. I offer beautifully designed photo albums and photo books that tell the story of your family. Each product is fully personalised to your preferences."
+      ]
+    }
+  ],
+  "studio-baby-questions": [
+    {
+      "id": "studio-baby-questions-1",
+      "question": "How long does a newborn photo shoot last?",
+      "answer": [
+        "A newborn session typically lasts between 2 and 3 hours. This allows plenty of time for feeding, soothing, and diaper changes, ensuring a calm and completely relaxed environment for your baby."
+      ]
+    },
+    {
+      "id": "studio-baby-questions-2",
+      "question": "Can the photo shoot include the whole family?",
+      "answer": [
+        "Absolutely! I highly encourage parents and siblings to participate. Capturing the love and connection between the whole family creates some of the most meaningful and cherished portraits of the entire session."
+      ]
+    },
+    {
+      "id": "studio-baby-questions-3",
+      "question": "When is the best time to book a session?",
+      "answer": [
+        "It is best to book your session while you are still pregnant, ideally during your second trimester. We will secure a flexible spot around your due date and confirm the exact day once your baby arrives."
+      ]
+    },
+    {
+      "id": "studio-baby-questions-4",
+      "question": "Do you provide outfits and costumes for babies?",
+      "answer": [
+        "Yes, the studio features a curated selection of beautiful, high-quality outfits, delicate wraps, and simple rompers in soft, neutral tones. You don't need to worry about buying anything special for the session."
+      ]
+    }
+  ],
+  "at-home-baby-questions": [
+    {
+      "id": "at-home-baby-questions-1",
+      "question": "Do we need to have a perfectly decorated or clean home?",
+      "answer": [
+        "Not at all! Please don't stress about cleaning or clutter. All I need is a bit of clear space near a bright window—usually the main bedroom, nursery, or living room. I will easily find the best light angles and frame out any unwanted clutter during the shoot."
+      ]
+    },
+    {
+      "id": "at-home-baby-questions-2",
+      "question": "What should we wear for an at-home lifestyle session?",
+      "answer": [
+        "Comfort is key for lifestyle sessions. Soft fabrics, neutral, solid tones, or warm earth tones look beautiful. Avoid big logos, heavy patterns, or overly formal clothing so that the focus remains entirely on your raw connections."
+      ]
+    },
+    {
+      "id": "at-home-baby-questions-3",
+      "question": "What happens if my baby gets fussy or cries?",
+      "answer": [
+        "Fussy babies are totally normal! At-home sessions are completely baby-led. We have plenty of time built in to stop for a diaper change, a quick soothing cuddle, or a relaxed feeding session. Those realistic comforting moments often make the most beautiful portraits."
+      ]
+    }
+  ],
+  "know-me": [
+    {
+      "id": "know-me-1",
+      "question": "HOW HAS MOTHERHOOD SHAPED YOUR PHOTOGRAPHER STYLE ?",
+      "answer": [
+        "It completely shifted my focus toward the details that truly matter. Before becoming a mom, I used to chase technical perfection. Now, I chase raw emotion—a tender touch, a tired but deeply loving glance, or tiny feet tucked into your arms. I know firsthand how incredibly fast this time flies, and my goal is to freeze those fleeting, authentic moments for you."
+      ]
+    },
+    {
+      "id": "know-me-2",
+      "question": "WHY DID YOU CHOOSE IN-HOME LIFESTYLE SESSIONS OVER A TRADITIONAL STUDIO?",
+      "answer": [
+        "As a mother, I know that getting packed up and going to a studio can be stressful for both babies and parents. True magic doesn't happen in front of a paper backdrop; it happens within your own four walls, where your family feels safest and most comfortable. I want to capture your real life—your morning coffee, your chaos, and your sofa cuddles."
+      ]
+    },
+    {
+      "id": "know-me-3",
+      "question": "HOW DOES YOUR EXPERIENCE AS A MOTHER HELP YOU DURING A SHOOT?",
+      "answer": [
+        "It gives me an endless supply of patience and empathy. I don't get stressed by toddler tantrums, a crying newborn, or spilled milk—I have been through it all! I deeply understand the exhaustion of new parents. Our sessions are never rushed; we move entirely at your baby's pace, completely free of pressure."
+      ]
+    }
+  ]
+}

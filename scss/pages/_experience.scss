@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
-.link-action {
+.experience-page .link-action {
   display: inline-flex;
   align-items: center;
   gap: $space-2;
@@ -63,7 +63,8 @@
       aspect-ratio: 3 / 4;
     }
 
-    &--visible {
+    &--visible,
+    &:not(.reveal-pending) {
       opacity: 1;
       transform: scale(1);
     }
@@ -90,7 +91,8 @@
       padding-right: $space-5;
     }
 
-    &--visible {
+    &--visible,
+    &:not(.reveal-pending) {
       opacity: 1;
       transform: translateY(0);
     }
@@ -143,11 +145,11 @@
   }
 
   &:not(&--second) {
-    background-image: url('/images/pexels-prabinbasnet-SMALL-contact-paral.webp');
+    background-image: url('../images/pexels-prabinbasnet-SMALL-contact-paral.webp');
   }
 
   &--second {
-    background-image: url('/images/neelam279-infant-SMALL-paral2.webp');
+    background-image: url('../images/neelam279-infant-SMALL-paral2.webp');
   }
 
   &__overlay {

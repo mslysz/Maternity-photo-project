@@ -10,7 +10,8 @@
     transition-delay: 0.1s;
     text-align: center;
 
-    &--visible {
+    &--visible,
+    &:not(.reveal-pending) {
       opacity: 1;
       transform: translateY(0);
     }
@@ -60,7 +61,8 @@
     @include fade-in-up;
     transition-delay: 0.3s;
 
-    &--visible {
+    &--visible,
+    &:not(.reveal-pending) {
       opacity: 1;
       transform: translateY(0);
     }
@@ -114,7 +116,7 @@
 
 .at-home-baby-parallax {
   position: relative;
-  background-image: url('../../images/pexels-lucas-w-575583756-16963954-SMALL.webp');
+  background-image: url('../images/pexels-lucas-w-575583756-16963954-SMALL.webp');
   min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -233,15 +235,17 @@
   }
 
   &__controls {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: static;
     width: 100%;
     max-width: 1200px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $space-2;
     justify-content: space-between;
-    padding-inline: $space-2;
-    transform: translate(-50%, -50%);
+    margin-top: $space-4;
+    margin-inline: auto;
+    padding-inline: $space-4;
     pointer-events: none;
   }
 
@@ -307,7 +311,11 @@
       color: $color-muted;
       padding: $space-2 $space-5;
       font-size: $fs-base;
-      transition: all 0.3s ease;
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 
       &:hover {
         background: rgba(0, 0, 0, 0.03);
@@ -447,7 +455,8 @@
     &__content {
       transform: translateY(25px);
 
-      &--visible {
+      &--visible,
+      &:not(.reveal-pending) {
         transform: translateY(0);
       }
     }

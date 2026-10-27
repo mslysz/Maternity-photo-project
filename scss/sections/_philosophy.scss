@@ -12,7 +12,8 @@
     transition:
       opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
       transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-    &--visible {
+    &--visible,
+    &:not(.reveal-pending) {
       opacity: 1;
       transform: translateY(0);
       transition-delay: 0.2s;
@@ -31,7 +32,8 @@
       opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
       transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 
-    &--visible {
+    &--visible,
+    &:not(.reveal-pending) {
       opacity: 1;
       transform: translateY(0);
     }

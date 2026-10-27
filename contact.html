@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patrice | Newborn & Maternity Photographer</title>
+    <title>Contact Patrice | Book a Photo Session</title>
     <meta
       name="description"
       content="Professional newborn, baby, and maternity photography by Patrice. Soulful and natural photo sessions in studio or at your home."
@@ -28,6 +28,10 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       />
     </noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -36,7 +40,10 @@
         class="header__logo"
         src="images/logo.webp"
         alt="Patrice Photography logo"
-      />
+        width="578"
+        height="237"
+            loading="eager"
+          />
       <button
         class="header__burger-btn"
         aria-label="Open menu"
@@ -61,7 +68,34 @@
       >
         <span class="material-symbols-outlined"> close </span>
       </button>
-      <ul class="nav__list"></ul>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="maternity.html">Maternity</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="studio-baby.html">Studio Baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="at-home-baby.html">At-home Baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="family-photography.html"
+            >Natural Family Photography</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="know-me.html">Meet Patrice</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--no-underline" href="blog.html">Blog</a>
+        </li>
+      </ul>
     </nav>
     <main>
       <section class="contact">
@@ -70,22 +104,31 @@
             <div class="contact__gallery contact__gallery--first">
               <figure class="contact__figure contact__figure--animate-down">
                 <img
-                  src="/images/pexels-rogeriosouzafotografia-SMALL-contact.webp"
+                  src="images/pexels-rogeriosouzafotografia-SMALL-contact.webp"
                   alt="Pregnant woman glowing in natural light"
-                />
+                  width="1280"
+                  height="1600"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
               </figure>
               <figure class="contact__figure contact__figure--animate-up">
                 <img
-                  src="/images/pexels-baby-minhchou-SMALL-contact.webp"
+                  src="images/pexels-baby-minhchou-SMALL-contact.webp"
                   alt="Newborn baby wrapped in soft blankie"
-                />
+                  width="1280"
+                  height="1920"
+            loading="eager"
+            decoding="async"
+          />
               </figure>
             </div>
             <div class="contact__content">
               <header class="contact__header">
-                <h2 class="contact__title">
+                <h1 class="contact__title">
                   I look forward to hearing from you
-                </h2>
+                </h1>
                 <p class="contact__subtitle">
                   Please get in touch with me to discuss the details of a
                   newborn or maternity photo shoot.
@@ -119,19 +162,27 @@
             <div class="contact__gallery contact__gallery--second">
               <figure class="contact__figure contact__figure--animate-down">
                 <img
-                  src="/images/jonathan-borba-xlY3ayphpIc-SMALL-contact2v.webp"
+                  src="images/jonathan-borba-xlY3ayphpIc-SMALL-contact2v.webp"
                   alt="Close-up of tiny newborn feet"
-                />
+                  width="1350"
+                  height="2025"
+            loading="eager"
+            decoding="async"
+          />
               </figure>
               <figure class="contact__figure contact__figure--animate-up">
                 <img
-                  src="/images/hollie-santos-fNwC6hnV4Po-SMALL-contact2v.webp"
+                  src="images/hollie-santos-fNwC6hnV4Po-SMALL-contact2v.webp"
                   alt="Happy parents holding their newborn"
-                />
+                  width="1350"
+                  height="2025"
+            loading="eager"
+            decoding="async"
+          />
               </figure>
             </div>
           </div>
-          <form action="#" class="contact__form form">
+          <form method="post" class="contact__form form" data-endpoint="">
             <div class="form__group">
               <label for="first-name" class="form__label">First Name</label>
               <input
@@ -181,12 +232,15 @@
                 id="session-type"
                 name="session-type"
                 class="form__select"
+                data-json-options="session-type"
               >
+                <!-- content:options:session-type -->
                 <option value="family-home">Family at-home</option>
                 <option value="maternity">Maternity</option>
                 <option value="baby-studio">Baby studio</option>
                 <option value="family-studio">Family studio</option>
                 <option value="birthday">1st Birthday</option>
+                <!-- /content:options:session-type -->
               </select>
             </div>
             <div class="form__group">
@@ -215,7 +269,14 @@
               <label for="source" class="form__label"
                 >How did you hear about me?</label
               >
-              <select id="source" name="source" class="form__select" required>
+              <select
+                id="source"
+                name="source"
+                class="form__select"
+                required
+                data-json-options="source"
+              >
+                <!-- content:options:source -->
                 <option value="" disabled selected hidden>
                   Select an option...
                 </option>
@@ -224,6 +285,7 @@
                 <option value="google">Google Search</option>
                 <option value="recommendation">Friends or Family</option>
                 <option value="other">Other source</option>
+                <!-- /content:options:source -->
               </select>
             </div>
             <div class="form__group form__group--full">
@@ -238,7 +300,15 @@
                 placeholder="Tell me more about your vision..."
               ></textarea>
             </div>
-            <button type="submit" class="form__btn">Send Message</button>
+            <p id="contact-form-status" class="form__status" role="status">
+              The form is not accepting messages yet. Please email
+              <a href="mailto:patricenebraska@gmail.com"
+                >patricenebraska@gmail.com</a
+              >.
+            </p>
+            <button type="submit" class="form__btn" disabled>
+              Send Message
+            </button>
           </form>
         </div>
       </section>
@@ -287,7 +357,11 @@
                   class="footer__logo"
                   src="images/logo.webp"
                   alt="Patrice Photography Logo"
-                />
+                  width="578"
+                  height="237"
+            loading="lazy"
+            decoding="async"
+          />
               </a>
             </div>
             <address class="footer__contact">

@@ -9,13 +9,29 @@ export default function initHeader() {
 
   if (!header || !burgerBtn || !closeBtn || !nav || !overlay) return;
 
+  const background = [...document.body.children].filter(
+    (element) =>
+      element !== nav && element !== overlay && element.tagName !== 'SCRIPT',
+  );
+  let backgroundState = [];
+  let previousOverflow = '';
+  header.classList.add('header--enhanced');
+  nav.classList.add('nav--enhanced');
+  nav.inert = true;
+
   const openMenu = () => {
+    previousOverflow = document.body.style.overflow;
+    backgroundState = background.map((element) => [element, element.inert]);
+    nav.inert = false;
     nav.classList.add('nav--open');
     overlay.classList.add('nav-overlay--active');
     burgerBtn.classList.add('header__burger-btn--hide');
     burgerBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
     closeBtn.focus();
+    background.forEach((element) => {
+      element.inert = true;
+    });
   };
 
   const closeMenu = () => {
@@ -23,8 +39,12 @@ export default function initHeader() {
     overlay.classList.remove('nav-overlay--active');
     burgerBtn.classList.remove('header__burger-btn--hide');
     burgerBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    backgroundState.forEach(([element, inert]) => {
+      element.inert = inert;
+    });
+    document.body.style.overflow = previousOverflow;
     burgerBtn.focus();
+    nav.inert = true;
   };
 
   burgerBtn.addEventListener('click', openMenu);
@@ -35,11 +55,25 @@ export default function initHeader() {
     if (event.key === 'Escape' && nav.classList.contains('nav--open')) {
       closeMenu();
     }
+    if (event.key === 'Tab' && nav.classList.contains('nav--open')) {
+      const focusable = [
+        ...nav.querySelectorAll('a[href], button:not([disabled])'),
+      ];
+      const first = focusable[0];
+      const last = focusable.at(-1);
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
   });
 
   let lastScrollY = window.scrollY;
 
-  window.addEventListener('scroll', () => {
+  const updateHeader = () => {
     if (nav.classList.contains('nav--open')) return;
 
     const currentScroll = window.scrollY;
@@ -55,5 +89,7 @@ export default function initHeader() {
       header.classList.remove('header--scrolled');
     }
     lastScrollY = currentScroll;
-  });
+  };
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
 }

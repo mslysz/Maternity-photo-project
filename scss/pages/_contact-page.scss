@@ -71,7 +71,8 @@
       transform: translateY(40px);
     }
 
-    &--visible {
+    &--visible,
+    &:not(.reveal-pending) {
       opacity: 1;
       transform: translateY(0);
     }

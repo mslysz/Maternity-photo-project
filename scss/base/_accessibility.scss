@@ -1,0 +1,59 @@
+@use 'variables' as *;
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 3px solid $color-dark;
+  outline-offset: 4px;
+}
+
+.form__input:focus-visible,
+.form__select:focus-visible,
+.form__textarea:focus-visible {
+  outline: 3px solid $color-dark;
+  outline-offset: 2px;
+}
+
+// Panels are readable without JavaScript and use their natural height when open.
+.know-me__content:not([hidden]),
+.maternity-questions__content:not([hidden]),
+.studio-baby-questions__content:not([hidden]),
+.at-home-baby-questions__content:not([hidden]),
+.post-card__full-content:not([hidden]) {
+  max-height: none;
+  opacity: 1;
+}
+
+.testimonials__controls,
+.memories__controls {
+  flex-wrap: wrap;
+}
+
+.form__status {
+  grid-column: 1 / -1;
+  font-family: $font-text;
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within,
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    background-attachment: scroll !important;
+  }
+
+  .reveal-pending {
+    opacity: 1 !important;
+  }
+}

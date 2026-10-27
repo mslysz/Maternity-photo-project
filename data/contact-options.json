@@ -1,0 +1,51 @@
+{
+  "session-type": [
+    {
+      "value": "family-home",
+      "label": "Family at-home"
+    },
+    {
+      "value": "maternity",
+      "label": "Maternity"
+    },
+    {
+      "value": "baby-studio",
+      "label": "Baby studio"
+    },
+    {
+      "value": "family-studio",
+      "label": "Family studio"
+    },
+    {
+      "value": "birthday",
+      "label": "1st Birthday"
+    }
+  ],
+  "source": [
+    {
+      "value": "",
+      "label": "Select an option...",
+      "placeholder": true
+    },
+    {
+      "value": "instagram",
+      "label": "Instagram"
+    },
+    {
+      "value": "facebook",
+      "label": "Facebook"
+    },
+    {
+      "value": "google",
+      "label": "Google Search"
+    },
+    {
+      "value": "recommendation",
+      "label": "Friends or Family"
+    },
+    {
+      "value": "other",
+      "label": "Other source"
+    }
+  ]
+}

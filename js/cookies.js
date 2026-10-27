@@ -1,20 +1,25 @@
 export default function initCookieBanner() {
-  const el = (selector) => document.querySelector(selector);
-
-  const cookieBanner = el('#cookie-banner');
-  const cookieAcceptBtn = el('#cookie-accept');
-
+  const cookieBanner = document.querySelector('#cookie-banner');
+  const cookieAcceptBtn = document.querySelector('#cookie-accept');
   if (!cookieBanner || !cookieAcceptBtn) return;
-
-  if (!localStorage.getItem('cookieConsent')) {
-    cookieBanner.classList.remove('cookie-banner--hidden');
-    cookieBanner.removeAttribute('inert');
+  let consent = false;
+  try {
+    consent = localStorage.getItem('cookieConsent') === 'true';
+  } catch {
+    // The banner also works when browser storage is unavailable.
   }
-
+  if (!consent) {
+    cookieBanner.classList.remove('cookie-banner--hidden');
+    cookieBanner.inert = false;
+  }
   cookieAcceptBtn.addEventListener('click', () => {
-    localStorage.setItem('cookieConsent', 'true');
+    try {
+      localStorage.setItem('cookieConsent', 'true');
+    } catch {
+      // Dismiss for this visit even if the preference cannot be saved.
+    }
     cookieAcceptBtn.blur();
     cookieBanner.classList.add('cookie-banner--hidden');
-    cookieBanner.setAttribute('inert', '');
+    cookieBanner.inert = true;
   });
 }

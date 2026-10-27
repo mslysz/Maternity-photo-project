@@ -4,7 +4,7 @@ import initMaternity from './maternity.js';
 import initPhilosophy from './philosophy.js';
 import initMemories from './memories.js';
 import initScroll from './scroll.js';
-import initShowcase from './revealAnimations.js';
+import initShowcase from './reveal-animations.js';
 import initStudioBaby from './studio-baby.js';
 import initAtHomeBaby from './at-home-baby.js';
 import initFamilyPage from './family-photography.js';
@@ -14,7 +14,7 @@ import initCookieBanner from './cookies.js';
 import initBlog from './blog.js';
 import initExperience from './experience.js';
 import { initNavigation } from './navigation.js';
-import initTestimonialSlider from './testimonialSlider.js';
+import initTestimonialSlider from './testimonial-slider.js';
 import initTestimonials from './testimonials.js';
 
 initHeader();
@@ -23,8 +23,9 @@ initNavigation();
 initAbout();
 initMaternity();
 
-await initTestimonials();
-initTestimonialSlider();
+initTestimonials().then((loaded) => {
+  if (loaded) initTestimonialSlider();
+});
 
 initPhilosophy();
 initMemories();

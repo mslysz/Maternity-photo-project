@@ -29,6 +29,10 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       />
     </noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -37,7 +41,10 @@
         class="header__logo"
         src="images/logo.webp"
         alt="Patrice Photography logo"
-      />
+        width="578"
+        height="237"
+            loading="eager"
+          />
       <!--burger menu-->
       <button
         class="header__burger-btn"
@@ -65,22 +72,60 @@
       >
         <span class="material-symbols-outlined"> close </span>
       </button>
-      <ul class="nav__list"></ul>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="maternity.html">Maternity</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="studio-baby.html">Studio Baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="at-home-baby.html">At-home Baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="family-photography.html"
+            >Natural Family Photography</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="know-me.html">Meet Patrice</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--no-underline" href="blog.html">Blog</a>
+        </li>
+      </ul>
     </nav>
     <main>
       <section class="hero">
         <div class="hero__images">
           <img
             class="hero__image hero__image--first"
-            src="/images/pexels-ekaterina-bolovtsova-4866882.webp"
+            src="images/pexels-ekaterina-bolovtsova-4866882.webp"
             alt="Beautiful family portrait session outdoor"
             fetchpriority="high"
+            width="1280"
+            height="1920"
+            loading="eager"
+            decoding="async"
           />
-          <img
+          <picture class="hero__picture--second">
+            <source media="(min-width: 1024px)" srcset="images/pexels-karola-g-6274695.webp" />
+            <img
             class="hero__image hero__image--second"
-            src="/images/pexels-karola-g-6274695.webp"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1'%20height='1'%3E%3C/svg%3E"
             alt="Happy family laughing together"
+            width="1280"
+            height="1920"
+            loading="eager"
+            decoding="async"
           />
+          </picture>
         </div>
         <div class="hero__content">
           <h1 class="hero__title">NATURAL FAMILY PHOTOGRAPHY</h1>
@@ -134,13 +179,21 @@
           </div>
           <div class="family-page__showcase">
             <img
-              src="/images/pexels-kseniachernaya-3965558.webp"
+              src="images/pexels-kseniachernaya-3965558.webp"
               alt="Mum is holding her child on her lap."
-            />
+              width="1280"
+              height="1918"
+            loading="lazy"
+            decoding="async"
+          />
             <img
-              src="/images/pexels-shvetsa-4586684.webp"
+              src="images/pexels-shvetsa-4586684.webp"
               alt="The father is holding his little girl in his arms, with his back to the camera."
-            />
+              width="1280"
+              height="1920"
+            loading="lazy"
+            decoding="async"
+          />
           </div>
         </div>
       </section>
@@ -160,33 +213,53 @@
           <div class="family-page-slideshow__carousel">
             <div class="family-page-slideshow__image">
               <img
-                src="/images/pexels-anastasiya-gepp-654466-SMALL.webp"
+                src="images/pexels-anastasiya-gepp-654466-SMALL.webp"
                 alt="family album image"
-              />
+                width="1280"
+                height="1920"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
             <div class="family-page-slideshow__image">
               <img
-                src="/images/pexels-polesietoys-4491661-SMALL.webp"
+                src="images/pexels-polesietoys-4491661-SMALL.webp"
                 alt="family album image"
-              />
+                width="1280"
+                height="1920"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
             <div class="family-page-slideshow__image">
               <img
-                src="/images/pexels-yankrukov-8435787-SMALL.webp"
+                src="images/pexels-yankrukov-8435787-SMALL.webp"
                 alt="family album image"
-              />
+                width="1280"
+                height="2032"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
             <div class="family-page-slideshow__image">
               <img
-                src="/images/pexels-cottonbro-3661471-SMALL.webp"
+                src="images/pexels-cottonbro-3661471-SMALL.webp"
                 alt="family album image"
-              />
+                width="1280"
+                height="1920"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
             <div class="family-page-slideshow__image">
               <img
-                src="/images/pexels-reinaldo-seixas-331488467-SMALL.webp"
+                src="images/pexels-reinaldo-seixas-331488467-SMALL.webp"
                 alt="family album image"
-              />
+                width="1280"
+                height="1707"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
           </div>
         </div>
@@ -213,25 +286,41 @@
                 src="images/pexels-shotpot-7705369.webp"
                 alt="Family lifestyle portrait at home"
                 class="family-page-story__img family-page-story__img--main"
-              />
+                width="1280"
+                height="853"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
 
             <img
               src="images/pexels-arhandjela-4337157.webp"
               alt="Mother and baby cuddling close"
               class="family-page-story__img family-page-story__img--top"
-            />
+              width="1280"
+              height="1925"
+            loading="lazy"
+            decoding="async"
+          />
 
             <img
               src="images/pexels-tima-miroshnichenko-6322129.webp"
               alt="Warm family embrace at home"
               class="family-page-story__img family-page-story__img--left"
-            />
+              width="1280"
+              height="1920"
+            loading="lazy"
+            decoding="async"
+          />
             <img
               src="images/pexels-nataliaolivera-30872975-SMALL.webp"
               alt="family"
               class="family-page-story__img family-page-story__img--bottom"
-            />
+              width="1350"
+              height="2022"
+            loading="lazy"
+            decoding="async"
+          />
           </div>
 
           <div class="family-page-story__content">
@@ -274,7 +363,11 @@
               class="mobile-showcase__image"
               src="images/garrett-jackson-oOnJWBMlb5A-SMALL.webp"
               alt="Mother holding baby"
-            />
+              width="1350"
+              height="899"
+            loading="lazy"
+            decoding="async"
+          />
             <div class="mobile-showcase__overlay"></div>
             <div class="mobile-showcase__content">
               <h2 class="mobile-showcase__title">Your Experience</h2>
@@ -289,7 +382,11 @@
               class="mobile-showcase__image"
               src="images/hu-chen-tCbTGNwrFNM-SMALL.webp"
               alt="Family portrait"
-            />
+              width="1350"
+              height="901"
+            loading="lazy"
+            decoding="async"
+          />
             <div class="mobile-showcase__overlay"></div>
             <div class="mobile-showcase__content">
               <h2 class="mobile-showcase__title">Let's Connect</h2>
@@ -347,7 +444,11 @@
                   class="footer__logo"
                   src="images/logo.webp"
                   alt="Patrice Photography Logo"
-                />
+                  width="578"
+                  height="237"
+            loading="lazy"
+            decoding="async"
+          />
               </a>
             </div>
 

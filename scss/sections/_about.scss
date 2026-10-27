@@ -19,7 +19,8 @@
       opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
       transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 
-    &--visible {
+    &--visible,
+    &:not(.reveal-pending) {
       opacity: 1;
       transform: translateY(0);
     }
@@ -36,7 +37,8 @@
     transition:
       opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
       transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
-    &--visible {
+    &--visible,
+    &:not(.reveal-pending) {
       opacity: 1;
       transform: translateY(0);
     }
@@ -114,7 +116,8 @@
     &__image {
       width: 35%;
       transform: translateY(40px);
-      &--visible {
+      &--visible,
+      &:not(.reveal-pending) {
         transform: translateY(0);
       }
     }
@@ -124,7 +127,8 @@
       text-align: left;
       transform: translateY(30px);
       padding-block: 0;
-      &--visible {
+      &--visible,
+      &:not(.reveal-pending) {
         transform: translateY(0);
       }
     }

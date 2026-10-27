@@ -1,0 +1,17 @@
+{
+  "name": "patrice-photography",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "content": "node scripts/sync-content.js && prettier --write maternity.html studio-baby.html at-home-baby.html know-me.html experience.html contact.html",
+    "build": "npm run content && sass --style=compressed scss/main.scss css/main.css",
+    "watch:css": "sass --watch scss/main.scss:css/main.css",
+    "dev": "node scripts/server.js",
+    "test": "npm run build && playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.50.0",
+    "prettier": "3.5.3",
+    "sass": "1.75.0"
+  }
+}

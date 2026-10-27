@@ -3,7 +3,7 @@
 
 .service-nav {
   position: relative;
-  background-image: url('../../images/arun-prakash-joVw83c01-s-SMALL.webp');
+  background-image: url('../images/arun-prakash-joVw83c01-s-SMALL.webp');
   min-height: 300px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -76,7 +76,11 @@
     display: inline-block;
     padding-bottom: 10px;
 
-    transition: all 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease,
+      transform 0.3s ease;
 
     &::after {
       content: '';

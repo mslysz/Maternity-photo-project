@@ -29,6 +29,10 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       />
     </noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -37,7 +41,10 @@
         class="header__logo"
         src="images/logo.webp"
         alt="Patrice Photography logo"
-      />
+        width="578"
+        height="237"
+            loading="eager"
+          />
       <!--burger menu-->
       <button
         class="header__burger-btn"
@@ -65,22 +72,60 @@
       >
         <span class="material-symbols-outlined"> close </span>
       </button>
-      <ul class="nav__list"></ul>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="maternity.html">Maternity</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="studio-baby.html">Studio Baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="at-home-baby.html">At-home Baby</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="family-photography.html"
+            >Natural Family Photography</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="know-me.html">Meet Patrice</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--no-underline" href="blog.html">Blog</a>
+        </li>
+      </ul>
     </nav>
     <main>
       <section class="hero">
         <div class="hero__images">
           <img
             class="hero__image hero__image--first"
-            src="/images/pexels-nataliaolivera-30872975-SMALL.webp"
+            src="images/pexels-nataliaolivera-30872975-SMALL.webp"
             alt="Beautiful baby portrait session in studio"
             fetchpriority="high"
+            width="1350"
+            height="2022"
+            loading="eager"
+            decoding="async"
           />
-          <img
+          <picture class="hero__picture--second">
+            <source media="(min-width: 1024px)" srcset="images/pexels-jonathanborba-19773993-SMALL.webp" />
+            <img
             class="hero__image hero__image--second"
-            src="/images/pexels-jonathanborba-19773993-SMALL.webp"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1'%20height='1'%3E%3C/svg%3E"
             alt="women-with-child"
+            width="1350"
+            height="2024"
+            loading="eager"
+            decoding="async"
           />
+          </picture>
         </div>
         <div class="hero__content">
           <h1 class="hero__title">LIFESTYLE AT-HOME BABY PHOTOGRAPHY</h1>
@@ -135,13 +180,21 @@
           </div>
           <div class="at-home-baby-page__showcase">
             <img
-              src="/images/pexels-el-gringo-photo-116752370-35245315-SMALL.webp"
+              src="images/pexels-el-gringo-photo-116752370-35245315-SMALL.webp"
               alt="Baby laying on parent bed during a lifestyle at-home photo session"
-            />
+              width="1350"
+              height="2025"
+            loading="lazy"
+            decoding="async"
+          />
             <img
-              src="/images/pexels-br-prch-1903728835-28680697-SMALL.webp"
+              src="images/pexels-br-prch-1903728835-28680697-SMALL.webp"
               alt="Parents holding newborn near nursery window in soft natural light"
-            />
+              width="1350"
+              height="2022"
+            loading="lazy"
+            decoding="async"
+          />
           </div>
         </div>
       </section>
@@ -150,8 +203,12 @@
         <figure class="at-home-baby-parallax__testimonial">
           <img
             class="at-home-baby-parallax__image"
-            src="/images/pexels-jonathanborba-19773893-SMALL.webp"
+            src="images/pexels-jonathanborba-19773893-SMALL.webp"
             alt="Soft blurred cozy home background with natural tones"
+            width="1350"
+            height="2024"
+            loading="lazy"
+            decoding="async"
           />
 
           <blockquote class="at-home-baby-parallax__quote">
@@ -172,33 +229,53 @@
           <div class="at-home-baby-slideshow__carousel">
             <div class="at-home-baby-slideshow__image">
               <img
-                src="/images/pexels-rdne-5847713.webp"
+                src="images/pexels-rdne-5847713.webp"
                 alt="at-home baby album image"
-              />
+                width="1280"
+                height="1920"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
             <div class="at-home-baby-slideshow__image">
               <img
-                src="/images/pexels-rdne-6849287.webp"
+                src="images/pexels-rdne-6849287.webp"
                 alt="at-home baby album image"
-              />
+                width="1280"
+                height="1920"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
             <div class="at-home-baby-slideshow__image">
               <img
-                src="/images/pexels-rdne-6849441.webp"
+                src="images/pexels-rdne-6849441.webp"
                 alt="at-home baby album image"
-              />
+                width="1280"
+                height="1920"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
             <div class="at-home-baby-slideshow__image">
               <img
-                src="/images/pexels-rdne-6849285.webp"
+                src="images/pexels-rdne-6849285.webp"
                 alt="at-home baby album image"
-              />
+                width="1280"
+                height="1920"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
             <div class="at-home-baby-slideshow__image">
               <img
-                src="/images/pexels-kissylla-alves-2149037842-30701843.webp"
+                src="images/pexels-kissylla-alves-2149037842-30701843.webp"
                 alt="at-home baby album image"
-              />
+                width="1280"
+                height="1920"
+            loading="lazy"
+            decoding="async"
+          />
             </div>
           </div>
         </div>
@@ -225,7 +302,11 @@
               src="images/pexels-tetiana-kos-32566295-14886815-SMALL.webp"
               alt="Cozy lifestyle family photography FAQ illustration"
               class="at-home-baby-questions__img"
-            />
+              width="1350"
+              height="1800"
+            loading="lazy"
+            decoding="async"
+          />
           </div>
 
           <div class="at-home-baby-questions__container">
@@ -233,82 +314,106 @@
               Frequently Asked Questions
             </h2>
 
-            <article class="at-home-baby-questions__question">
-              <h3 class="at-home-baby-questions__heading-item">
-                <button
-                  class="at-home-baby-questions__header"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="home-faq-1"
+            <div data-json-faq="at-home-baby-questions">
+              <!-- content:faq:at-home-baby-questions -->
+              <article class="at-home-baby-questions__question">
+                <h3 class="at-home-baby-questions__heading-item">
+                  <button
+                    class="at-home-baby-questions__header"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="at-home-baby-questions-1"
+                  >
+                    <span class="at-home-baby-questions__title"
+                      >Do we need to have a perfectly decorated or clean
+                      home?</span
+                    >
+                    <span
+                      class="at-home-baby-questions__icon"
+                      aria-hidden="true"
+                      >+</span
+                    >
+                  </button>
+                </h3>
+                <div
+                  class="at-home-baby-questions__content"
+                  id="at-home-baby-questions-1"
                 >
-                  <span class="at-home-baby-questions__title">
-                    Do we need to have a perfectly decorated or clean home?
-                  </span>
-                  <span class="at-home-baby-questions__icon">+</span>
-                </button>
-              </h3>
+                  <p class="at-home-baby-questions__answer">
+                    Not at all! Please don&#39;t stress about cleaning or
+                    clutter. All I need is a bit of clear space near a bright
+                    window—usually the main bedroom, nursery, or living room. I
+                    will easily find the best light angles and frame out any
+                    unwanted clutter during the shoot.
+                  </p>
+                </div>
+              </article>
 
-              <div class="at-home-baby-questions__content" id="home-faq-1">
-                <p class="at-home-baby-questions__answer">
-                  Not at all! Please don't stress about cleaning or clutter. All
-                  I need is a bit of clear space near a bright window—usually
-                  the main bedroom, nursery, or living room. I will easily find
-                  the best light angles and frame out any unwanted clutter
-                  during the shoot.
-                </p>
-              </div>
-            </article>
-
-            <article class="at-home-baby-questions__question">
-              <h3 class="at-home-baby-questions__heading-item">
-                <button
-                  class="at-home-baby-questions__header"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="home-faq-2"
+              <article class="at-home-baby-questions__question">
+                <h3 class="at-home-baby-questions__heading-item">
+                  <button
+                    class="at-home-baby-questions__header"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="at-home-baby-questions-2"
+                  >
+                    <span class="at-home-baby-questions__title"
+                      >What should we wear for an at-home lifestyle
+                      session?</span
+                    >
+                    <span
+                      class="at-home-baby-questions__icon"
+                      aria-hidden="true"
+                      >+</span
+                    >
+                  </button>
+                </h3>
+                <div
+                  class="at-home-baby-questions__content"
+                  id="at-home-baby-questions-2"
                 >
-                  <span class="at-home-baby-questions__title">
-                    What should we wear for an at-home lifestyle session?
-                  </span>
-                  <span class="at-home-baby-questions__icon">+</span>
-                </button>
-              </h3>
+                  <p class="at-home-baby-questions__answer">
+                    Comfort is key for lifestyle sessions. Soft fabrics,
+                    neutral, solid tones, or warm earth tones look beautiful.
+                    Avoid big logos, heavy patterns, or overly formal clothing
+                    so that the focus remains entirely on your raw connections.
+                  </p>
+                </div>
+              </article>
 
-              <div class="at-home-baby-questions__content" id="home-faq-2">
-                <p class="at-home-baby-questions__answer">
-                  Comfort is key for lifestyle sessions. Soft fabrics, neutral,
-                  solid tones, or warm earth tones look beautiful. Avoid big
-                  logos, heavy patterns, or overly formal clothing so that the
-                  focus remains entirely on your raw connections.
-                </p>
-              </div>
-            </article>
-
-            <article class="at-home-baby-questions__question">
-              <h3 class="at-home-baby-questions__heading-item">
-                <button
-                  class="at-home-baby-questions__header"
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="home-faq-3"
+              <article class="at-home-baby-questions__question">
+                <h3 class="at-home-baby-questions__heading-item">
+                  <button
+                    class="at-home-baby-questions__header"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="at-home-baby-questions-3"
+                  >
+                    <span class="at-home-baby-questions__title"
+                      >What happens if my baby gets fussy or cries?</span
+                    >
+                    <span
+                      class="at-home-baby-questions__icon"
+                      aria-hidden="true"
+                      >+</span
+                    >
+                  </button>
+                </h3>
+                <div
+                  class="at-home-baby-questions__content"
+                  id="at-home-baby-questions-3"
                 >
-                  <span class="at-home-baby-questions__title">
-                    What happens if my baby gets fussy or cries?
-                  </span>
-                  <span class="at-home-baby-questions__icon">+</span>
-                </button>
-              </h3>
-
-              <div class="at-home-baby-questions__content" id="home-faq-3">
-                <p class="at-home-baby-questions__answer">
-                  Fussy babies are totally normal! At-home sessions are
-                  completely baby-led. We have plenty of time built in to stop
-                  for a diaper change, a quick soothing cuddle, or a relaxed
-                  feeding session. Those realistic comforting moments often make
-                  the most beautiful portraits.
-                </p>
-              </div>
-            </article>
+                  <p class="at-home-baby-questions__answer">
+                    Fussy babies are totally normal! At-home sessions are
+                    completely baby-led. We have plenty of time built in to stop
+                    for a diaper change, a quick soothing cuddle, or a relaxed
+                    feeding session. Those realistic comforting moments often
+                    make the most beautiful portraits.
+                  </p>
+                </div>
+              </article>
+              <!-- /content:faq:at-home-baby-questions -->
+            </div>
           </div>
         </div>
       </section>
@@ -343,7 +448,11 @@
               class="mobile-showcase__image"
               src="images/garrett-jackson-oOnJWBMlb5A-SMALL.webp"
               alt="Mother holding baby"
-            />
+              width="1350"
+              height="899"
+            loading="lazy"
+            decoding="async"
+          />
 
             <div class="mobile-showcase__overlay"></div>
 
@@ -361,7 +470,11 @@
               class="mobile-showcase__image"
               src="images/hu-chen-tCbTGNwrFNM-SMALL.webp"
               alt="Family portrait"
-            />
+              width="1350"
+              height="901"
+            loading="lazy"
+            decoding="async"
+          />
 
             <div class="mobile-showcase__overlay"></div>
 
@@ -421,7 +534,11 @@
                   class="footer__logo"
                   src="images/logo.webp"
                   alt="Patrice Photography Logo"
-                />
+                  width="578"
+                  height="237"
+            loading="lazy"
+            decoding="async"
+          />
               </a>
             </div>
 

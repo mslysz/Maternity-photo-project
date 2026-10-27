@@ -1,34 +1,18 @@
 export default function initScroll() {
-  const el = (selector) => document.querySelector(selector);
-  const topBtn = el('#scrollToTopBtn');
-  const footerLogo = el('.footer__logo-link');
-
+  const topBtn = document.querySelector('#scrollToTopBtn');
   if (!topBtn) return;
-
-  const scrollToTop = () => {
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const update = () => {
+    const visible = window.scrollY > 300;
+    topBtn.classList.toggle('show', visible);
+    topBtn.inert = !visible;
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+  topBtn.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: motion.matches ? 'instant' : 'smooth',
     });
-  };
-
-  window.addEventListener('scroll', () => {
-    if (
-      document.body.scrollTop > 300 ||
-      document.documentElement.scrollTop > 300
-    ) {
-      topBtn.classList.add('show');
-    } else {
-      topBtn.classList.remove('show');
-    }
   });
-
-  topBtn.addEventListener('click', scrollToTop);
-
-  if (footerLogo) {
-    footerLogo.addEventListener('click', (event) => {
-      event.preventDefault();
-      scrollToTop();
-    });
-  }
 }

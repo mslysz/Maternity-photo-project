@@ -1,19 +1,21 @@
+@use 'variables' as *;
+
 //Responsive design
 
 @mixin tablet {
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-lg) {
     @content;
   }
 }
 
 @mixin large-desktop {
-  @media (min-width: 1440px) {
+  @media (min-width: $bp-xl) {
     @content;
   }
 }
